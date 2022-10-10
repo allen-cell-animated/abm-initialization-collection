@@ -1,0 +1,7 @@
+abm\_initialization\_collection package
+=======================================
+
+.. automodule:: abm_initialization_collection
+   :members:
+   :undoc-members:
+   :show-inheritance:
