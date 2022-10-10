@@ -1,2 +1,5 @@
-# abm-initialization-collection
-Collection of tasks for initializing abm simulations
+[![Build Status](https://github.com/allen-cell-animated/abm-initialization-collection/workflows/build/badge.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/actions?query=workflow%3Abuild)
+[![Codecov](https://img.shields.io/codecov/c/gh/allen-cell-animated/abm-initialization-collection?token=JQK4B1DD7R)](https://codecov.io/gh/allen-cell-animated/abm-initialization-collection)
+[![Lint Status](https://github.com/allen-cell-animated/abm-initialization-collection/workflows/lint/badge.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/actions?query=workflow%3Alint)
+[![Documentation](https://github.com/allen-cell-animated/abm-initialization-collection/workflows/documentation/badge.svg)](https://allen-cell-animated.github.io/abm-initialization-collection/)
+[![Code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
