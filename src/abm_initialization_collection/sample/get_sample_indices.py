@@ -71,10 +71,10 @@ def get_rect_sample_indices(
     :
         List of sample indices.
     """
-    z_increment = round(resolution / scale_z)
-    xy_increment = round(resolution / scale_xy)
+    increment_z = round(resolution / scale_z)
+    increment_xy = round(resolution / scale_xy)
 
-    sample_coordinates = make_rect_grid_coordinates(bounds, xy_increment, z_increment)
+    sample_coordinates = make_rect_grid_coordinates(bounds, increment_xy, increment_z)
     sample_indices = [(round(x), round(y), z) for x, y, z in sample_coordinates]
 
     return sample_indices
@@ -108,10 +108,10 @@ def get_hex_sample_indices(
     :
         List of sample indices.
     """
-    z_increment = round(resolution / scale_z)
-    xy_increment = round(resolution / scale_xy)
+    increment_z = round(resolution / scale_z)
+    increment_xy = round(resolution / scale_xy)
 
-    sample_coordinates = make_hex_grid_coordinates(bounds, xy_increment, z_increment)
+    sample_coordinates = make_hex_grid_coordinates(bounds, increment_xy, increment_z)
     sample_indices = [(round(x), round(y), z) for x, y, z in sample_coordinates]
 
     return sample_indices
