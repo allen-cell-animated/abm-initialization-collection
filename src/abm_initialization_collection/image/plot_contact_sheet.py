@@ -1,5 +1,5 @@
 from math import ceil, sqrt
-from typing import Optional
+from typing import Optional, Tuple, List, Union
 
 from prefect import task
 import numpy as np
@@ -70,24 +70,28 @@ def plot_contact_sheet(
     return fig
 
 
-def separate_rows_cols(items):
+def separate_rows_cols(items: list[str]) -> Tuple[int, int, List[Tuple[int, int, Optional[int]]]]:
     n_items = len(items)
     n_cols = ceil(sqrt(len(items)))
     n_rows = ceil(len(items) / n_cols)
 
-    indices = [(i, j, i * n_cols + j) for i in range(n_rows) for j in range(n_cols)]
-    indices = [(i, j, k if k < n_items else None) for i, j, k in indices]
+    all_indices = [(i, j, i * n_cols + j) for i in range(n_rows) for j in range(n_cols)]
+    indices = [(i, j, k if k < n_items else None) for i, j, k in all_indices]
 
     return n_rows, n_cols, indices
 
 
-def make_subplots(n_rows, n_cols):
+def make_subplots(
+    n_rows: int, n_cols: int
+) -> Tuple[mpl.figure.Figure, Union[mpl.axes.Axes, np.ndarray]]:
     plt.close("all")
     fig, axs = plt.subplots(n_rows, n_cols, sharex="all", sharey="all")
     return fig, axs
 
 
-def select_axes(axs, i, j, n_rows, n_cols):
+def select_axes(
+    axs: Union[mpl.axes.Axes, np.ndarray], i: int, j: int, n_rows: int, n_cols: int
+) -> mpl.axes.Axes:
     if n_rows == 1 and n_cols == 1:
         return axs
     if n_rows == 1:
