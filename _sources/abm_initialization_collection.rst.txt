@@ -14,3 +14,4 @@ Subpackages
 
    abm_initialization_collection.coordinate
    abm_initialization_collection.image
+   abm_initialization_collection.sample

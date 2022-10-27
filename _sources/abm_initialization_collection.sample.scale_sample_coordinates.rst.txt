@@ -1,0 +1,7 @@
+abm\_initialization\_collection.sample.scale\_sample\_coordinates module
+========================================================================
+
+.. automodule:: abm_initialization_collection.sample.scale_sample_coordinates
+   :members:
+   :undoc-members:
+   :show-inheritance:

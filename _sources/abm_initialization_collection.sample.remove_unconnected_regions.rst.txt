@@ -1,0 +1,7 @@
+abm\_initialization\_collection.sample.remove\_unconnected\_regions module
+==========================================================================
+
+.. automodule:: abm_initialization_collection.sample.remove_unconnected_regions
+   :members:
+   :undoc-members:
+   :show-inheritance:

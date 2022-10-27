@@ -1,0 +1,7 @@
+abm\_initialization\_collection.sample.get\_image\_samples module
+=================================================================
+
+.. automodule:: abm_initialization_collection.sample.get_image_samples
+   :members:
+   :undoc-members:
+   :show-inheritance:
