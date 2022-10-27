@@ -4,7 +4,7 @@ import pandas as pd
 
 
 @task
-def filter_coordinate_bounds(coordinates: list,radius: float) -> pd.DataFrame:
+def filter_coordinate_bounds(coordinates: list, radius: float) -> pd.DataFrame:
     """
     Filters list for coordinates with given radius.
 
