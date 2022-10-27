@@ -1,0 +1,16 @@
+abm\_initialization\_collection.coordinate package
+==================================================
+
+.. automodule:: abm_initialization_collection.coordinate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   abm_initialization_collection.coordinate.filter_coordinate_bounds
+   abm_initialization_collection.coordinate.make_grid_coordinates
