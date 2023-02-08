@@ -1,9 +1,9 @@
 from math import floor
 
-from prefect import task
 import numpy as np
-from scipy.ndimage import distance_transform_edt, binary_dilation, binary_fill_holes
 from aicsimageio import AICSImage
+from prefect import task
+from scipy.ndimage import binary_dilation, binary_fill_holes, distance_transform_edt
 
 
 @task

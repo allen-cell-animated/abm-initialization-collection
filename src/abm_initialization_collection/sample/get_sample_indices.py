@@ -1,10 +1,10 @@
-from typing import Tuple, List
+from typing import List, Tuple
 
 from prefect import task
 
 from abm_initialization_collection.coordinate.make_grid_coordinates import (
-    make_rect_grid_coordinates,
     make_hex_grid_coordinates,
+    make_rect_grid_coordinates,
 )
 
 
