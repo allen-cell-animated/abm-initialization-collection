@@ -56,7 +56,6 @@ def create_boundary_mask(array: np.ndarray, iterations: int) -> np.ndarray:
 
     # Fill holes in the mask in each z slice.
     for z in range(array.shape[0]):
-        print(z)
         binary_fill_holes(mask[z, :, :], output=mask[z, :, :])
 
     return mask
