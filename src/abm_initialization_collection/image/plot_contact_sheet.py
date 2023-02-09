@@ -1,12 +1,11 @@
 from math import ceil, sqrt
-from typing import Optional, Tuple, List, Union
+from typing import List, Optional, Tuple, Union
 
-from prefect import task
-import numpy as np
-import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-
+import numpy as np
+import pandas as pd
+from prefect import task
 
 mpl.use("Agg")
 mpl.rc("figure", dpi=200)

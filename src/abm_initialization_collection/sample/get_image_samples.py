@@ -1,8 +1,8 @@
 from typing import List
 
-from prefect import task
-from aicsimageio import AICSImage
 import pandas as pd
+from aicsimageio import AICSImage
+from prefect import task
 
 
 @task

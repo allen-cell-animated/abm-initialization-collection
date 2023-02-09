@@ -1,9 +1,9 @@
 from math import floor, sqrt
-from typing import Tuple, List
+from typing import List, Tuple
 
-from prefect import task
 import numpy as np
 from hexalattice import hexalattice
+from prefect import task
 
 
 @task

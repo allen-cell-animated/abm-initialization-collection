@@ -1,10 +1,10 @@
 from typing import Tuple
 
-from prefect import task
 import numpy as np
 import pandas as pd
-from skimage import measure
+from prefect import task
 from scipy.spatial import distance
+from skimage import measure
 
 
 @task
