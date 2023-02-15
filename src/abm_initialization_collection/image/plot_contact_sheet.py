@@ -1,5 +1,5 @@
 from math import ceil, sqrt
-from typing import List, Optional, Tuple, Union
+from typing import Optional, Union
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -69,7 +69,7 @@ def plot_contact_sheet(
     return fig
 
 
-def separate_rows_cols(items: list[str]) -> Tuple[int, int, List[Tuple[int, int, Optional[int]]]]:
+def separate_rows_cols(items: list[str]) -> tuple[int, int, list[tuple[int, int, Optional[int]]]]:
     n_items = len(items)
     n_cols = ceil(sqrt(len(items)))
     n_rows = ceil(len(items) / n_cols)
@@ -82,7 +82,7 @@ def separate_rows_cols(items: list[str]) -> Tuple[int, int, List[Tuple[int, int,
 
 def make_subplots(
     n_rows: int, n_cols: int
-) -> Tuple[mpl.figure.Figure, Union[mpl.axes.Axes, np.ndarray]]:
+) -> tuple[mpl.figure.Figure, Union[mpl.axes.Axes, np.ndarray]]:
     plt.close("all")
     fig, axs = plt.subplots(n_rows, n_cols, sharex="all", sharey="all")
     return fig, axs

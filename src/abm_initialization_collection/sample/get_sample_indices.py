@@ -1,5 +1,3 @@
-from typing import List, Tuple
-
 from prefect import task
 
 from abm_initialization_collection.coordinate.make_grid_coordinates import (
@@ -11,11 +9,11 @@ from abm_initialization_collection.coordinate.make_grid_coordinates import (
 @task
 def get_sample_indices(
     grid: str,
-    bounds: Tuple[int, int, int],
+    bounds: tuple[int, int, int],
     resolution: float,
     scale_xy: float,
     scale_z: float,
-) -> List:
+) -> list:
     """
     Get sample indices with given bounds for selected grid type.
 
@@ -47,11 +45,11 @@ def get_sample_indices(
 
 
 def get_rect_sample_indices(
-    bounds: Tuple[int, int, int],
+    bounds: tuple[int, int, int],
     resolution: float,
     scale_xy: float,
     scale_z: float,
-) -> List:
+) -> list:
     """
     Get list of (x, y, z) sample indices for rect grid.
 
@@ -81,11 +79,11 @@ def get_rect_sample_indices(
 
 
 def get_hex_sample_indices(
-    bounds: Tuple[int, int, int],
+    bounds: tuple[int, int, int],
     resolution: float,
     scale_xy: float,
     scale_z: float,
-) -> List:
+) -> list:
     """
     Get list of (x, y, z) sample indices for hex grid.
 
