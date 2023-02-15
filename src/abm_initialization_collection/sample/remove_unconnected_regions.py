@@ -1,5 +1,3 @@
-from typing import Tuple
-
 import numpy as np
 import pandas as pd
 from prefect import task
@@ -120,7 +118,7 @@ def remove_unconnected_by_distance(samples: pd.DataFrame, threshold: float) -> p
     return samples_connected.sort_values(by=["id", "x", "y", "z"]).reset_index(drop=True)
 
 
-def get_sample_minimums(samples: pd.DataFrame) -> Tuple[int, int, int]:
+def get_sample_minimums(samples: pd.DataFrame) -> tuple[int, int, int]:
     """
     Gets minimums in x, y, and z directions for samples.
 
@@ -140,7 +138,7 @@ def get_sample_minimums(samples: pd.DataFrame) -> Tuple[int, int, int]:
     return minimums
 
 
-def get_sample_maximums(samples: pd.DataFrame) -> Tuple[int, int, int]:
+def get_sample_maximums(samples: pd.DataFrame) -> tuple[int, int, int]:
     """
     Gets maximums in x, y, and z directions for samples.
 
@@ -162,8 +160,8 @@ def get_sample_maximums(samples: pd.DataFrame) -> Tuple[int, int, int]:
 
 def convert_to_integer_array(
     samples: pd.DataFrame,
-    minimums: Tuple[int, int, int],
-    maximums: Tuple[int, int, int],
+    minimums: tuple[int, int, int],
+    maximums: tuple[int, int, int],
 ) -> np.ndarray:
     """
     Converts ids and coordinate samples to integer array.
@@ -191,7 +189,7 @@ def convert_to_integer_array(
     return array
 
 
-def convert_to_dataframe(array: np.ndarray, minimums: Tuple[int, int, int]) -> pd.DataFrame:
+def convert_to_dataframe(array: np.ndarray, minimums: tuple[int, int, int]) -> pd.DataFrame:
     """
     Converts integer array to ids and coordinate samples.
 

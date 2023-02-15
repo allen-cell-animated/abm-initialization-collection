@@ -1,5 +1,4 @@
 from math import floor, sqrt
-from typing import List, Tuple
 
 import numpy as np
 from hexalattice import hexalattice
@@ -9,10 +8,10 @@ from prefect import task
 @task
 def make_grid_coordinates(
     grid: str,
-    bounds: Tuple[int, int, int],
+    bounds: tuple[int, int, int],
     increment_xy: float,
     increment_z: float,
-) -> List:
+) -> list:
     """
     Get all coordinates within given bounding box for selected grid type.
 
@@ -42,10 +41,10 @@ def make_grid_coordinates(
 
 
 def make_rect_grid_coordinates(
-    bounds: Tuple[int, int, int],
+    bounds: tuple[int, int, int],
     increment_xy: float,
     increment_z: float,
-) -> List:
+) -> list:
     """
     Get list of bounded (x, y, z) coordinates for rect grid.
 
@@ -75,10 +74,10 @@ def make_rect_grid_coordinates(
 
 
 def make_hex_grid_coordinates(
-    bounds: Tuple[int, int, int],
+    bounds: tuple[int, int, int],
     increment_xy: float,
     increment_z: float,
-) -> List:
+) -> list:
     """
     Get list of bounded (x, y, z) coordinates for hex grid.
 

@@ -1,12 +1,10 @@
-from typing import List
-
 import pandas as pd
 from aicsimageio import AICSImage
 from prefect import task
 
 
 @task
-def get_image_samples(image: AICSImage, sample_indices: List, channel: int) -> pd.DataFrame:
+def get_image_samples(image: AICSImage, sample_indices: list, channel: int) -> pd.DataFrame:
     """
     Sample image at given indices into list of (id, x, y, z) samples.
 
