@@ -1,12 +1,9 @@
-from prefect import task
-
 from abm_initialization_collection.coordinate.make_grid_coordinates import (
     make_hex_grid_coordinates,
     make_rect_grid_coordinates,
 )
 
 
-@task
 def get_sample_indices(
     grid: str,
     bounds: tuple[int, int, int],

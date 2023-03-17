@@ -1,11 +1,9 @@
 import numpy as np
 import pandas as pd
-from prefect import task
 from scipy.spatial import distance
 from skimage import measure
 
 
-@task
 def remove_unconnected_regions(
     samples: pd.DataFrame, unconnected_threshold: float, unconnected_filter: str
 ) -> pd.DataFrame:

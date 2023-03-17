@@ -1,8 +1,6 @@
 import pandas as pd
-from prefect import task
 
 
-@task
 def exclude_selected_ids(samples: pd.DataFrame, exclude: list[int]) -> pd.DataFrame:
     """
     Filters samples to exclude given ids.

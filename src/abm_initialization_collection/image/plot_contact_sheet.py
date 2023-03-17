@@ -5,7 +5,6 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from prefect import task
 
 mpl.use("Agg")
 mpl.rc("figure", dpi=200)
@@ -13,7 +12,6 @@ mpl.rc("font", size=8)
 mpl.rc("axes", titlesize=10, titleweight="bold")
 
 
-@task
 def plot_contact_sheet(
     data: pd.DataFrame, reference: Optional[pd.DataFrame] = None
 ) -> mpl.figure.Figure:

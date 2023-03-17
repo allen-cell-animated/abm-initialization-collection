@@ -1,7 +1,14 @@
-from .exclude_selected_ids import exclude_selected_ids
-from .get_image_samples import get_image_samples
-from .get_sample_indices import get_sample_indices
-from .include_selected_ids import include_selected_ids
-from .remove_edge_regions import remove_edge_regions
-from .remove_unconnected_regions import remove_unconnected_regions
-from .scale_sample_coordinates import scale_sample_coordinates
+import importlib
+import os
+import sys
+
+from prefect import task
+
+for module_file in os.listdir(os.path.dirname(__file__)):
+    if module_file == "__init__.py" or not module_file.endswith(".py"):
+        continue
+
+    module_name = module_file.replace(".py", "")
+
+    module = importlib.import_module(f".{module_name}", package=__name__)
+    setattr(sys.modules[__name__], module_name, task(getattr(module, module_name)))
