@@ -1,8 +1,6 @@
 import pandas as pd
-from prefect import task
 
 
-@task
 def select_fov_images(metadata: pd.DataFrame, cells_per_fov: int, num_fovs: int) -> list[dict]:
     fov_count = 0
     fov_seg_paths = []

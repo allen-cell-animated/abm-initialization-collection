@@ -2,10 +2,8 @@ from math import floor, sqrt
 
 import numpy as np
 from hexalattice import hexalattice
-from prefect import task
 
 
-@task
 def make_grid_coordinates(
     grid: str,
     bounds: tuple[int, int, int],

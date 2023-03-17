@@ -1,8 +1,6 @@
 import pandas as pd
-from prefect import task
 
 
-@task
 def remove_edge_regions(
     samples: pd.DataFrame, edge_threshold: int, edge_padding: float
 ) -> pd.DataFrame:

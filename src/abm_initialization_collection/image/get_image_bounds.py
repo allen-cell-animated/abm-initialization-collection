@@ -1,8 +1,6 @@
 from aicsimageio import AICSImage
-from prefect import task
 
 
-@task
 def get_image_bounds(image: AICSImage) -> tuple[int, int, int]:
     """
     Extracts image bounds in the x, y, and z directions.

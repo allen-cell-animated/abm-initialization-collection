@@ -1,9 +1,7 @@
 import numpy as np
 import pandas as pd
-from prefect import task
 
 
-@task
 def filter_coordinate_bounds(coordinates: list, radius: float) -> pd.DataFrame:
     """
     Filters list for coordinates with given radius.

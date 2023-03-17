@@ -2,11 +2,9 @@ from math import floor
 
 import numpy as np
 from aicsimageio import AICSImage
-from prefect import task
 from scipy.ndimage import binary_dilation, binary_fill_holes, distance_transform_edt
 
 
-@task
 def create_voronoi_image(
     image: AICSImage, channel: int, iterations: int, height: int
 ) -> np.ndarray:
