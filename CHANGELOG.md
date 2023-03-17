@@ -2,7 +2,7 @@
 
 > Compare with [v0.2.1](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.2.1...v0.2.2)
 
-### Features
+### Admin
 
 - Upgrade prefect and update dependencies by [@jessicasyu](https://github.com/jessicasyu) in [#10](https://github.com/allen-cell-animated/abm-initialization-collection/pull/10)
 
@@ -10,10 +10,13 @@
 
 > Compare with [v0.2.0](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.2.0...v0.2.1)
 
-### Bug fixes
+### Documentation
+
+- Fix type hints by [@jessicasyu](https://github.com/jessicasyu) in [#8](https://github.com/allen-cell-animated/abm-initialization-collection/pull/8)
+
+### Admin
 
 - Update import sorting for all tasks by [@jessicasyu](https://github.com/jessicasyu) in [#7](https://github.com/allen-cell-animated/abm-initialization-collection/pull/7)
-- Fix type hints by [@jessicasyu](https://github.com/jessicasyu) in [#8](https://github.com/allen-cell-animated/abm-initialization-collection/pull/8)
 
 # [v0.2.0](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.2.0) - 2022-11-09
 
