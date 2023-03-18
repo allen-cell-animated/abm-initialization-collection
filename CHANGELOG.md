@@ -1,3 +1,12 @@
+# [v0.3.0](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.3.0) - 2023-03-18
+
+> Compare with [v0.2.2](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.2.2...v0.3.0)
+
+### Admin
+
+- Move prefect task decorator to init by [@jessicasyu](https://github.com/jessicasyu) in [#12](https://github.com/allen-cell-animated/abm-initialization-collection/pull/12)
+- Add changelog and update actions by [@jessicasyu](https://github.com/jessicasyu) in [#13](https://github.com/allen-cell-animated/abm-initialization-collection/pull/13)
+
 # [v0.2.2](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.2.2) - 2023-02-22
 
 > Compare with [v0.2.1](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.2.1...v0.2.2)
