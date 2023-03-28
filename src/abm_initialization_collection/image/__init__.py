@@ -1,14 +1,21 @@
 import importlib
-import os
 import sys
 
 from prefect import task
 
-for module_file in os.listdir(os.path.dirname(__file__)):
-    if "__" in module_file or not module_file.endswith(".py"):
-        continue
+from .create_voronoi_image import create_voronoi_image
+from .get_image_bounds import get_image_bounds
+from .plot_contact_sheet import plot_contact_sheet
+from .select_fov_images import select_fov_images
 
-    module_name = module_file.replace(".py", "")
+TASK_MODULES = [
+    create_voronoi_image,
+    get_image_bounds,
+    plot_contact_sheet,
+    select_fov_images,
+]
 
-    module = importlib.import_module(f".{module_name}", package=__name__)
-    setattr(sys.modules[__name__], module_name, task(getattr(module, module_name)))
+for task_module in TASK_MODULES:
+    MODULE_NAME = task_module.__name__
+    module = importlib.import_module(f".{MODULE_NAME}", package=__name__)
+    setattr(sys.modules[__name__], MODULE_NAME, task(getattr(module, MODULE_NAME)))
