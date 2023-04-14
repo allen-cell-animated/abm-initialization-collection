@@ -1,3 +1,11 @@
+# [v0.4.0](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.4.0) - 2023-04-14
+
+> Compare with [v0.3.1](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.3.1...v0.4.0)
+
+### Features
+
+- Update select fov images task to use bins by [@jessicasyu](https://github.com/jessicasyu) in [#20](https://github.com/allen-cell-animated/abm-initialization-collection/pull/20)
+
 # [v0.3.1](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.3.1) - 2023-03-30
 
 > Compare with [v0.3.0](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.3.0...v0.3.1)
