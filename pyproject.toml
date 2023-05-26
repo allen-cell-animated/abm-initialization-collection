@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "abm-initialization-collection"
-version = "0.4.0"
+version = "0.5.0"
 description = "Collection of tasks for initializing abm simulations."
 authors = [
     "Jessica S. Yu <jesyu@uw.edu>"

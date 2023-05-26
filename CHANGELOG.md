@@ -1,3 +1,17 @@
+# [v0.5.0](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.5.0) - 2023-05-26
+
+> Compare with [v0.4.0](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.4.0...v0.5.0)
+
+### Features
+
+- Update filter coordinate task with centering option by [@jessicasyu](https://github.com/jessicasyu) in [#23](https://github.com/allen-cell-animated/abm-initialization-collection/pull/23)
+
+### Admin
+
+- Update lock file version by [@jessicasyu](https://github.com/jessicasyu) in [#22](https://github.com/allen-cell-animated/abm-initialization-collection/pull/22)
+- Update dev dependencies by [@jessicasyu](https://github.com/jessicasyu) in [#24](https://github.com/allen-cell-animated/abm-initialization-collection/pull/24)
+- Bump dependency versions by [@jessicasyu](https://github.com/jessicasyu) in [#25](https://github.com/allen-cell-animated/abm-initialization-collection/pull/25)
+
 # [v0.4.0](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.4.0) - 2023-04-14
 
 > Compare with [v0.3.1](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.3.1...v0.4.0)
