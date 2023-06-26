@@ -1,16 +1,30 @@
+|
+
+.. include:: ../README.md
+   :parser: myst_parser.sphinx_
+
+Module reference
+================
+
+.. autosummary::
+   :toctree: _summary
+   :caption: Module reference
+   :template: custom_template.rst
+   :recursive:
+
+   abm_initialization_collection.coordinate
+   abm_initialization_collection.image
+   abm_initialization_collection.sample
+
 .. toctree::
    :hidden:
-   :maxdepth: 1
-   :caption: Contents:
+   :caption: Development
 
-   Overview <self>
-   Package modules <modules>
+   Changelog <changelog>
 
-.. mdinclude:: ../README.md
+.. toctree::
+   :hidden:
+   :caption: Project links
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   GitHub <https://github.com/allen-cell-animated/abm-initialization-collection>
+   PyPI <https://pypi.org/project/abm-initialization-collection/>
