@@ -1,0 +1,22 @@
+remove\_unconnected\_regions
+============================
+
+.. automodule:: abm_initialization_collection.sample.remove_unconnected_regions
+    :members:
+    :undoc-members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

@@ -1,0 +1,22 @@
+get\_sample\_indices
+====================
+
+.. automodule:: abm_initialization_collection.sample.get_sample_indices
+    :members:
+    :undoc-members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

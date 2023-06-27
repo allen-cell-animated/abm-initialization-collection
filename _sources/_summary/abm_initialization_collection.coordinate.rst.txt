@@ -1,0 +1,36 @@
+﻿abm\_initialization\_collection.coordinate
+==========================================
+
+.. automodule:: abm_initialization_collection.coordinate
+    :members:
+    :undoc-members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+
+.. currentmodule:: abm_initialization_collection
+
+.. autosummary::
+   :toctree:
+   :template: custom_module.rst
+   :recursive:
+
+   coordinate.filter_coordinate_bounds
+   coordinate.make_grid_coordinates
+

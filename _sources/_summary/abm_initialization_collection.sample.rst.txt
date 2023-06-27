@@ -1,0 +1,41 @@
+﻿abm\_initialization\_collection.sample
+======================================
+
+.. automodule:: abm_initialization_collection.sample
+    :members:
+    :undoc-members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+
+.. currentmodule:: abm_initialization_collection
+
+.. autosummary::
+   :toctree:
+   :template: custom_module.rst
+   :recursive:
+
+   sample.exclude_selected_ids
+   sample.get_image_samples
+   sample.get_sample_indices
+   sample.include_selected_ids
+   sample.remove_edge_regions
+   sample.remove_unconnected_regions
+   sample.scale_sample_coordinates
+

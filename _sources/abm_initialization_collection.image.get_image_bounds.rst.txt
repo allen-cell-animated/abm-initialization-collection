@@ -1,7 +1,0 @@
-abm\_initialization\_collection.image.get\_image\_bounds module
-===============================================================
-
-.. automodule:: abm_initialization_collection.image.get_image_bounds
-   :members:
-   :undoc-members:
-   :show-inheritance:

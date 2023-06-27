@@ -1,7 +1,0 @@
-abm\_initialization\_collection.image.plot\_contact\_sheet module
-=================================================================
-
-.. automodule:: abm_initialization_collection.image.plot_contact_sheet
-   :members:
-   :undoc-members:
-   :show-inheritance:

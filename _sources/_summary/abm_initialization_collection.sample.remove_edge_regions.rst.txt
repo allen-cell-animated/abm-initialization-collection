@@ -1,0 +1,22 @@
+remove\_edge\_regions
+=====================
+
+.. automodule:: abm_initialization_collection.sample.remove_edge_regions
+    :members:
+    :undoc-members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

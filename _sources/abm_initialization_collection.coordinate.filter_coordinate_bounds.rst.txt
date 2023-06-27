@@ -1,7 +1,0 @@
-abm\_initialization\_collection.coordinate.filter\_coordinate\_bounds module
-============================================================================
-
-.. automodule:: abm_initialization_collection.coordinate.filter_coordinate_bounds
-   :members:
-   :undoc-members:
-   :show-inheritance:

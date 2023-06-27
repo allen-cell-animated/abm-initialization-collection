@@ -1,0 +1,22 @@
+make\_grid\_coordinates
+=======================
+
+.. automodule:: abm_initialization_collection.coordinate.make_grid_coordinates
+    :members:
+    :undoc-members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

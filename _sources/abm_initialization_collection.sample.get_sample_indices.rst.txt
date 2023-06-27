@@ -1,7 +1,0 @@
-abm\_initialization\_collection.sample.get\_sample\_indices module
-==================================================================
-
-.. automodule:: abm_initialization_collection.sample.get_sample_indices
-   :members:
-   :undoc-members:
-   :show-inheritance:

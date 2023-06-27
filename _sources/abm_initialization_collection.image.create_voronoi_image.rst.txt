@@ -1,7 +1,0 @@
-abm\_initialization\_collection.image.create\_voronoi\_image module
-===================================================================
-
-.. automodule:: abm_initialization_collection.image.create_voronoi_image
-   :members:
-   :undoc-members:
-   :show-inheritance:

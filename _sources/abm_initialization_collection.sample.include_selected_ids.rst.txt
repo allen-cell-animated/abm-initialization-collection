@@ -1,7 +1,0 @@
-abm\_initialization\_collection.sample.include\_selected\_ids module
-====================================================================
-
-.. automodule:: abm_initialization_collection.sample.include_selected_ids
-   :members:
-   :undoc-members:
-   :show-inheritance:

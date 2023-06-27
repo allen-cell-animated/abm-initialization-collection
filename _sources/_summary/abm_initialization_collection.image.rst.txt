@@ -1,0 +1,38 @@
+﻿abm\_initialization\_collection.image
+=====================================
+
+.. automodule:: abm_initialization_collection.image
+    :members:
+    :undoc-members:
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+
+.. currentmodule:: abm_initialization_collection
+
+.. autosummary::
+   :toctree:
+   :template: custom_module.rst
+   :recursive:
+
+   image.create_voronoi_image
+   image.get_image_bounds
+   image.plot_contact_sheet
+   image.select_fov_images
+
