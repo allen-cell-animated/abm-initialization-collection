@@ -226,7 +226,7 @@
 <span id="scale-sample-coordinates"></span><h1>scale_sample_coordinates<a class="headerlink" href="#module-abm_initialization_collection.sample.scale_sample_coordinates" title="Permalink to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.scale_sample_coordinates.scale_sample_coordinates">
-<span class="sig-name descname"><span class="pre">scale_sample_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinate_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/scale_sample_coordinates.html#scale_sample_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.scale_sample_coordinates.scale_sample_coordinates" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">scale_sample_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinate_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/scale_sample_coordinates.html#scale_sample_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.scale_sample_coordinates.scale_sample_coordinates" title="Permalink to this definition">#</a></dt>
 <dd><p>Scales sampled coordinates using to given coordinate type.</p>
 <p>The “absolute” coordinate type scales sample index coordinate into absolute
 positions (in um).
@@ -235,18 +235,15 @@ Otherwise, samples index coordinates are not modified.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>samples</strong> (<em>DataFrame</em>) – Sample cell ids and coordinates.</p></li>
+<li><p><strong>samples</strong> – Sample cell ids and coordinates.</p></li>
 <li><p><strong>coordinate_type</strong> (<em>{'absolute'</em><em>, </em><em>'step'</em><em>, </em><em>None}</em>) – The coordinate scaling type.</p></li>
-<li><p><strong>resolution</strong> (<em>float</em>) – Distance between samples (um).</p></li>
-<li><p><strong>scale_xy</strong> (<em>float</em>) – Resolution scaling in x/y (um/pixel).</p></li>
-<li><p><strong>scale_z</strong> (<em>float</em>) – Resolution scaling in z (um/pixel).</p></li>
+<li><p><strong>resolution</strong> – Distance between samples (um).</p></li>
+<li><p><strong>scale_xy</strong> – Resolution scaling in x/y (um/pixel).</p></li>
+<li><p><strong>scale_z</strong> – Resolution scaling in z (um/pixel).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Sample cell ids and scaled coordinates.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><em>DataFrame</em></p>
 </dd>
 </dl>
 </dd></dl>

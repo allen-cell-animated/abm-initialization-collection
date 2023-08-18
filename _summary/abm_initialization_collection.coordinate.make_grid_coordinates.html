@@ -226,66 +226,57 @@
 <span id="make-grid-coordinates"></span><h1>make_grid_coordinates<a class="headerlink" href="#module-abm_initialization_collection.coordinate.make_grid_coordinates" title="Permalink to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.coordinate.make_grid_coordinates.make_grid_coordinates">
-<span class="sig-name descname"><span class="pre">make_grid_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/coordinate/make_grid_coordinates.html#make_grid_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.coordinate.make_grid_coordinates.make_grid_coordinates" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">make_grid_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/coordinate/make_grid_coordinates.html#make_grid_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.coordinate.make_grid_coordinates.make_grid_coordinates" title="Permalink to this definition">#</a></dt>
 <dd><p>Get all coordinates within given bounding box for selected grid type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>{'rect'</em><em>, </em><em>'hex'}</em>) – Type of grid.</p></li>
-<li><p><strong>bounds</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – Bounds in the x, y, and z directions.</p></li>
-<li><p><strong>increment_xy</strong> (<em>float</em>) – Increment size in x/y directions.</p></li>
-<li><p><strong>increment_z</strong> (<em>float</em>) – Increment size in z direction.</p></li>
+<li><p><strong>bounds</strong> – Bounds in the x, y, and z directions.</p></li>
+<li><p><strong>increment_xy</strong> – Increment size in x/y directions.</p></li>
+<li><p><strong>increment_z</strong> – Increment size in z direction.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of grid coordinates.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.coordinate.make_grid_coordinates.make_rect_grid_coordinates">
-<span class="sig-name descname"><span class="pre">make_rect_grid_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/coordinate/make_grid_coordinates.html#make_rect_grid_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.coordinate.make_grid_coordinates.make_rect_grid_coordinates" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">make_rect_grid_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/coordinate/make_grid_coordinates.html#make_rect_grid_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.coordinate.make_grid_coordinates.make_rect_grid_coordinates" title="Permalink to this definition">#</a></dt>
 <dd><p>Get list of bounded (x, y, z) coordinates for rect grid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bounds</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – Bounds in the x, y, and z directions.</p></li>
-<li><p><strong>increment_xy</strong> (<em>float</em>) – Increment size in x/y directions.</p></li>
-<li><p><strong>increment_z</strong> (<em>float</em>) – Increment size in z direction.</p></li>
+<li><p><strong>bounds</strong> – Bounds in the x, y, and z directions.</p></li>
+<li><p><strong>increment_xy</strong> – Increment size in x/y directions.</p></li>
+<li><p><strong>increment_z</strong> – Increment size in z direction.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of grid coordinates.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.coordinate.make_grid_coordinates.make_hex_grid_coordinates">
-<span class="sig-name descname"><span class="pre">make_hex_grid_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/coordinate/make_grid_coordinates.html#make_hex_grid_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.coordinate.make_grid_coordinates.make_hex_grid_coordinates" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">make_hex_grid_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/coordinate/make_grid_coordinates.html#make_hex_grid_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.coordinate.make_grid_coordinates.make_hex_grid_coordinates" title="Permalink to this definition">#</a></dt>
 <dd><p>Get list of bounded (x, y, z) coordinates for hex grid.</p>
 <p>Coordinates are offset in sets of three z slices to form a face-centered
 cubic (FCC) packing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bounds</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – Bounds in the x, y, and z directions.</p></li>
-<li><p><strong>increment_xy</strong> (<em>float</em>) – Increment size in x/y directions.</p></li>
-<li><p><strong>increment_z</strong> (<em>float</em>) – Increment size in z direction.</p></li>
+<li><p><strong>bounds</strong> – Bounds in the x, y, and z directions.</p></li>
+<li><p><strong>increment_xy</strong> – Increment size in x/y directions.</p></li>
+<li><p><strong>increment_z</strong> – Increment size in z direction.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of grid coordinates.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>

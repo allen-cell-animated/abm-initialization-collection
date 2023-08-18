@@ -2,8 +2,8 @@
 =====================================
 
 .. automodule:: abm_initialization_collection.image
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
 
    
    

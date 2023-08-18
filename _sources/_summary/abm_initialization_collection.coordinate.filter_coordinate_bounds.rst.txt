@@ -2,8 +2,8 @@ filter\_coordinate\_bounds
 ==========================
 
 .. automodule:: abm_initialization_collection.coordinate.filter_coordinate_bounds
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
 
    
    

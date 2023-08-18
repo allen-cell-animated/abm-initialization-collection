@@ -2,8 +2,8 @@ exclude\_selected\_ids
 ======================
 
 .. automodule:: abm_initialization_collection.sample.exclude_selected_ids
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
 
    
    

@@ -226,45 +226,29 @@
 <span id="create-voronoi-image"></span><h1>create_voronoi_image<a class="headerlink" href="#module-abm_initialization_collection.image.create_voronoi_image" title="Permalink to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.image.create_voronoi_image.create_voronoi_image">
-<span class="sig-name descname"><span class="pre">create_voronoi_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#create_voronoi_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.create_voronoi_image" title="Permalink to this definition">#</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>image</strong> (<em>AICSImage</em>) – </p></li>
-<li><p><strong>channel</strong> (<em>int</em>) – </p></li>
-<li><p><strong>iterations</strong> (<em>int</em>) – </p></li>
-<li><p><strong>height</strong> (<em>int</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><em>ndarray</em></p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">create_voronoi_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AICSImage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#create_voronoi_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.create_voronoi_image" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.image.create_voronoi_image.create_boundary_mask">
-<span class="sig-name descname"><span class="pre">create_boundary_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#create_boundary_mask"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.create_boundary_mask" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">create_boundary_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#create_boundary_mask"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.create_boundary_mask" title="Permalink to this definition">#</a></dt>
 <dd><p>Creates filled boundary mask around regions in array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>array</strong> (<em>ndarray</em>) – Image array.</p></li>
-<li><p><strong>iterations</strong> (<em>int</em>) – Number of boundary estimation steps.</p></li>
+<li><p><strong>array</strong> – Image array.</p></li>
+<li><p><strong>iterations</strong> – Number of boundary estimation steps.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Boundary mask array.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><em>ndarray</em></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.image.create_voronoi_image.get_mask_bounds">
-<span class="sig-name descname"><span class="pre">get_mask_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_range</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#get_mask_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.get_mask_bounds" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_mask_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#get_mask_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.get_mask_bounds" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculates the indices of z axis bounds with given target range.</p>
 <p>If the current range between z axis bounds (the minimum and maximum
 indicies in the z axis where there exist non-zero entries) is wider than
@@ -272,49 +256,40 @@ the target range, the current bound indices are returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>array</strong> (<em>ndarray</em>) – Image array.</p></li>
-<li><p><strong>target_range</strong> (<em>int</em>) – Target distance between bounds.</p></li>
+<li><p><strong>array</strong> – Image array.</p></li>
+<li><p><strong>target_range</strong> – Target distance between bounds.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Lower and upper bound indices.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>tuple[int, int]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.image.create_voronoi_image.get_array_slices">
-<span class="sig-name descname"><span class="pre">get_array_slices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#get_array_slices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.get_array_slices" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_array_slices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">slice</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">slice</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">slice</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#get_array_slices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.get_array_slices" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculate bounding box slices around binary array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>array</strong> (<em>ndarray</em>) – Binary array.</p>
+<dd class="field-odd"><p><strong>array</strong> – Binary array.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Slices in the z, y, and x directions.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>tuple[slice, slice, slice]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.image.create_voronoi_image.calculate_voronoi_array">
-<span class="sig-name descname"><span class="pre">calculate_voronoi_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#calculate_voronoi_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.calculate_voronoi_array" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">calculate_voronoi_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/image/create_voronoi_image.html#calculate_voronoi_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.create_voronoi_image.calculate_voronoi_array" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculates voronoi on image array using distance transform.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>array</strong> (<em>ndarray</em>) – Image array.</p>
+<dd class="field-odd"><p><strong>array</strong> – Image array.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Voronoi array.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><em>ndarray</em></p>
 </dd>
 </dl>
 </dd></dl>

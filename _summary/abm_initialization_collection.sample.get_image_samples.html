@@ -226,21 +226,18 @@
 <span id="get-image-samples"></span><h1>get_image_samples<a class="headerlink" href="#module-abm_initialization_collection.sample.get_image_samples" title="Permalink to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.get_image_samples.get_image_samples">
-<span class="sig-name descname"><span class="pre">get_image_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/get_image_samples.html#get_image_samples"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.get_image_samples.get_image_samples" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_image_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AICSImage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/get_image_samples.html#get_image_samples"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.get_image_samples.get_image_samples" title="Permalink to this definition">#</a></dt>
 <dd><p>Sample image at given indices into list of (id, x, y, z) samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>image</strong> (<em>AICSImage</em>) – Image object to sample.</p></li>
-<li><p><strong>sample_indices</strong> (<em>list</em>) – List of sampling indices.</p></li>
-<li><p><strong>channel</strong> (<em>int</em>) – Image channel to sample.</p></li>
+<li><p><strong>image</strong> – Image object to sample.</p></li>
+<li><p><strong>sample_indices</strong> – List of sampling indices.</p></li>
+<li><p><strong>channel</strong> – Image channel to sample.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dataframe of image samples.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><em>DataFrame</em></p>
 </dd>
 </dl>
 </dd></dl>

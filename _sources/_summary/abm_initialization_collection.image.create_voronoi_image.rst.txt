@@ -2,8 +2,8 @@ create\_voronoi\_image
 ======================
 
 .. automodule:: abm_initialization_collection.image.create_voronoi_image
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
 
    
    

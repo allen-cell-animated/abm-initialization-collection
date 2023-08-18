@@ -226,69 +226,60 @@
 <span id="get-sample-indices"></span><h1>get_sample_indices<a class="headerlink" href="#module-abm_initialization_collection.sample.get_sample_indices" title="Permalink to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.get_sample_indices.get_sample_indices">
-<span class="sig-name descname"><span class="pre">get_sample_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/get_sample_indices.html#get_sample_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.get_sample_indices.get_sample_indices" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_sample_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/get_sample_indices.html#get_sample_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.get_sample_indices.get_sample_indices" title="Permalink to this definition">#</a></dt>
 <dd><p>Get sample indices with given bounds for selected grid type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>{'rect'</em><em>, </em><em>'hex'}</em>) – Type of grid.</p></li>
-<li><p><strong>bounds</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – Sampling bounds in the x, y, and z directions.</p></li>
-<li><p><strong>resolution</strong> (<em>float</em>) – Distance between samples (um).</p></li>
-<li><p><strong>scale_xy</strong> (<em>float</em>) – Resolution scaling in x/y (um/pixel).</p></li>
-<li><p><strong>scale_z</strong> (<em>float</em>) – Resolution scaling in z (um/pixel).</p></li>
+<li><p><strong>bounds</strong> – Sampling bounds in the x, y, and z directions.</p></li>
+<li><p><strong>resolution</strong> – Distance between samples (um).</p></li>
+<li><p><strong>scale_xy</strong> – Resolution scaling in x/y (um/pixel).</p></li>
+<li><p><strong>scale_z</strong> – Resolution scaling in z (um/pixel).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of sample indices.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.get_sample_indices.get_rect_sample_indices">
-<span class="sig-name descname"><span class="pre">get_rect_sample_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/get_sample_indices.html#get_rect_sample_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.get_sample_indices.get_rect_sample_indices" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_rect_sample_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/get_sample_indices.html#get_rect_sample_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.get_sample_indices.get_rect_sample_indices" title="Permalink to this definition">#</a></dt>
 <dd><p>Get list of (x, y, z) sample indices for rect grid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bounds</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – Sampling bounds in the x, y, and z directions.</p></li>
-<li><p><strong>resolution</strong> (<em>float</em>) – Distance between samples (um).</p></li>
-<li><p><strong>scale_xy</strong> (<em>float</em>) – Resolution scaling in x/y.</p></li>
-<li><p><strong>scale_z</strong> (<em>float</em>) – Resolution scaling in z.</p></li>
+<li><p><strong>bounds</strong> – Sampling bounds in the x, y, and z directions.</p></li>
+<li><p><strong>resolution</strong> – Distance between samples (um).</p></li>
+<li><p><strong>scale_xy</strong> – Resolution scaling in x/y.</p></li>
+<li><p><strong>scale_z</strong> – Resolution scaling in z.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of sample indices.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.get_sample_indices.get_hex_sample_indices">
-<span class="sig-name descname"><span class="pre">get_hex_sample_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/get_sample_indices.html#get_hex_sample_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.get_sample_indices.get_hex_sample_indices" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_hex_sample_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_xy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/get_sample_indices.html#get_hex_sample_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.get_sample_indices.get_hex_sample_indices" title="Permalink to this definition">#</a></dt>
 <dd><p>Get list of (x, y, z) sample indices for hex grid.</p>
 <p>Sample indices are offset in sets of three z slices to form a
 face-centered cubic (FCC) packing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bounds</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – Sampling bounds in the x, y, and z directions.</p></li>
-<li><p><strong>resolution</strong> (<em>float</em>) – Distance between samples (um).</p></li>
-<li><p><strong>scale_xy</strong> (<em>float</em>) – Resolution scaling in x/y.</p></li>
-<li><p><strong>scale_z</strong> (<em>float</em>) – Resolution scaling in z.</p></li>
+<li><p><strong>bounds</strong> – Sampling bounds in the x, y, and z directions.</p></li>
+<li><p><strong>resolution</strong> – Distance between samples (um).</p></li>
+<li><p><strong>scale_xy</strong> – Resolution scaling in x/y.</p></li>
+<li><p><strong>scale_z</strong> – Resolution scaling in z.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of sample indices.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>

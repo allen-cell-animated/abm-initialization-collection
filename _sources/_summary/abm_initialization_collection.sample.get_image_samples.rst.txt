@@ -2,8 +2,8 @@ get\_image\_samples
 ===================
 
 .. automodule:: abm_initialization_collection.sample.get_image_samples
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
 
    
    

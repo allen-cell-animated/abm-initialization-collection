@@ -2,8 +2,8 @@ get\_image\_bounds
 ==================
 
 .. automodule:: abm_initialization_collection.image.get_image_bounds
-    :members:
-    :undoc-members:
+   :members:
+   :undoc-members:
 
    
    
