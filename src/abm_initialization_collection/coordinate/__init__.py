@@ -1,3 +1,5 @@
+"""Tasks for initialization from coordinates."""
+
 from prefect import task
 
 from .filter_coordinate_bounds import filter_coordinate_bounds

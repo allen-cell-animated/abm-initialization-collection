@@ -1,3 +1,5 @@
+"""Tasks for initialization from images."""
+
 from prefect import task
 
 from .create_voronoi_image import create_voronoi_image
