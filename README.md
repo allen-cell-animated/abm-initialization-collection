@@ -1,10 +1,12 @@
-[![Build Status](https://github.com/allen-cell-animated/abm-initialization-collection/workflows/build/badge.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/actions?query=workflow%3Abuild)
-[![Codecov](https://img.shields.io/codecov/c/gh/allen-cell-animated/abm-initialization-collection?token=JQK4B1DD7R)](https://codecov.io/gh/allen-cell-animated/abm-initialization-collection)
-[![Lint Status](https://github.com/allen-cell-animated/abm-initialization-collection/workflows/lint/badge.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/actions?query=workflow%3Alint)
-[![Documentation](https://github.com/allen-cell-animated/abm-initialization-collection/workflows/documentation/badge.svg)](https://allen-cell-animated.github.io/abm-initialization-collection/)
-[![Code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Build Status](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/build.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/actions?query=workflow%3Abuild)
+[![Lint Status](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/lint.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/actions?query=workflow%3Alint)
+[![Documentation](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/documentation.svg)](https://allen-cell-animated.github.io/abm-initialization-collection/)
+[![Coverage](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/coverage.svg)](https://allen-cell-animated.github.io/abm-initialization-collection/_coverage/)
+[![Code style](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/style.svg)](https://github.com/psf/black)
+[![Version](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/version.svg)](https://pypi.org/project/abm-initialization-collection/)
+[![License](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/license.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/blob/main/LICENSE)
 
-Collection of tasks for initializing abm simulations.
+Collection of tasks for initializing ABM simulations.
 Designed to be used both in [Prefect](https://docs.prefect.io/latest/) workflows and as modular, useful pieces of code.
 
 # Installation
