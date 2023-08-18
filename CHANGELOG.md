@@ -1,3 +1,15 @@
+# [v0.5.2](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.5.2) - 2023-08-18
+
+> Compare with [v0.5.1](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.5.1...v0.5.2)
+
+### Documentation
+
+- Add module docstrings by [@jessicasyu](https://github.com/jessicasyu) in [#29](https://github.com/allen-cell-animated/abm-initialization-collection/pull/29)
+
+### Admin
+
+- Update workflow permissions and badges by [@jessicasyu](https://github.com/jessicasyu) in [#30](https://github.com/allen-cell-animated/abm-initialization-collection/pull/30)
+
 # [v0.5.1](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.5.1) - 2023-06-29
 
 > Compare with [v0.5.0](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.5.0...v0.5.1)
