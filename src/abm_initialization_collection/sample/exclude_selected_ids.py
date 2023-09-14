@@ -17,5 +17,6 @@ def exclude_selected_ids(samples: pd.DataFrame, exclude: list[int]) -> pd.DataFr
     :
         Samples without excluded ids.
     """
+
     samples = samples[~samples.id.isin(exclude)]
     return samples.reset_index(drop=True)
