@@ -29,6 +29,7 @@ def make_grid_coordinates(
     :
         List of grid coordinates.
     """
+
     if grid == "rect":
         return make_rect_grid_coordinates(bounds, increment_xy, increment_z)
 
@@ -60,6 +61,7 @@ def make_rect_grid_coordinates(
     :
         List of grid coordinates.
     """
+
     x_bound, y_bound, z_bound = bounds
 
     z_indices = np.arange(0, z_bound, increment_z)
@@ -96,6 +98,7 @@ def make_hex_grid_coordinates(
     :
         List of grid coordinates.
     """
+
     x_bound, y_bound, z_bound = bounds
 
     z_indices = np.arange(0, z_bound, increment_z)
