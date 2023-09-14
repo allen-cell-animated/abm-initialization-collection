@@ -69,6 +69,21 @@ class TestScaleSampleCoordinates(unittest.TestCase):
         for expected, actual in zip(z_scaled, scaled_samples["z"]):
             self.assertEqual(int(expected), actual)
 
+    def test_scale_sample_coordinates_invalid_coordinate_return_unchanged(self) -> None:
+        sample_data = np.array(
+            [
+                [1, 2, 3, 4],
+                [5, 6, 7, 8],
+                [9, 10, 11, 12],
+                [13, 14, 15, 16],
+                [17, 18, 19, 20],
+            ]
+        )
+        samples = pd.DataFrame(sample_data, columns=["id", "x", "y", "z"])
+
+        scaled_samples = scale_sample_coordinates(samples, "invalid_coordinate_type", 0, 0, 0)
+        self.assertTrue(samples.equals(scaled_samples))
+
 
 if __name__ == "__main__":
     unittest.main()
