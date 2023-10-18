@@ -1,3 +1,19 @@
+# [v0.6.0](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.6.0) - 2023-10-18
+
+> Compare with [v0.5.2](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.5.2...v0.6.0)
+
+### Bug fixes
+
+- Change select fov images volume column name by [@jessicasyu](https://github.com/jessicasyu) in [#33](https://github.com/allen-cell-animated/abm-initialization-collection/pull/33)
+
+### Tests
+
+- Add unit tests for initialization collection tasks by [@jessicasyu](https://github.com/jessicasyu) in [#32](https://github.com/allen-cell-animated/abm-initialization-collection/pull/32)
+
+### Admin
+
+- Bump dependency versions by [@jessicasyu](https://github.com/jessicasyu) in [#34](https://github.com/allen-cell-animated/abm-initialization-collection/pull/34)
+
 # [v0.5.2](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.5.2) - 2023-08-18
 
 > Compare with [v0.5.1](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.5.1...v0.5.2)
