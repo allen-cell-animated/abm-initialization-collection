@@ -14,7 +14,7 @@ def select_fov_images(
         only_m0 = (seg_group.cell_stage == "M0").all()
 
         if no_outliers and only_m0 and len(seg_group) == cells_per_fov:
-            mean = seg_group["mem_shape_volume_lcc"].mean()
+            mean = seg_group["MEM_shape_volume"].mean()
             bin_index = np.digitize(mean, bins)
 
             if bin_counts[bin_index] < counts[bin_index - 1]:
