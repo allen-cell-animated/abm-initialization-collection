@@ -48,6 +48,7 @@ def remove_unconnected_by_connectivity(samples: pd.DataFrame) -> pd.DataFrame:
     :
         Samples with unconnected regions removed.
     """
+
     minimums = get_sample_minimums(samples)
     maximums = get_sample_maximums(samples)
 
@@ -96,6 +97,7 @@ def remove_unconnected_by_distance(samples: pd.DataFrame, threshold: float) -> p
     :
         Samples with unconnected regions removed.
     """
+
     all_connected: list = []
 
     # Iterate through each id and filter out samples above the distance threshold.
@@ -129,6 +131,7 @@ def get_sample_minimums(samples: pd.DataFrame) -> tuple[int, int, int]:
     -------
         Tuple of minimums.
     """
+
     min_x = min(samples.x)
     min_y = min(samples.y)
     min_z = min(samples.z)
@@ -149,6 +152,7 @@ def get_sample_maximums(samples: pd.DataFrame) -> tuple[int, int, int]:
     -------
         Tuple of maximums.
     """
+
     max_x = max(samples.x)
     max_y = max(samples.y)
     max_z = max(samples.z)
@@ -178,6 +182,7 @@ def convert_to_integer_array(
     :
         Array of ids.
     """
+
     length, width, height = np.subtract(maximums, minimums).astype("int32")
     array = np.zeros((height + 1, width + 1, length + 1), dtype="int32")
 
@@ -203,6 +208,7 @@ def convert_to_dataframe(array: np.ndarray, minimums: tuple[int, int, int]) -> p
     :
         Dataframe of ids and coordinates.
     """
+
     min_x, min_y, min_z = minimums
 
     samples = [
@@ -228,5 +234,6 @@ def get_minimum_distance(source: np.ndarray, targets: np.ndarray) -> float:
     :
         Minimum distance between source and targets.
     """
+
     distances = distance.cdist(source, targets)
     return np.min(distances[distances != 0])

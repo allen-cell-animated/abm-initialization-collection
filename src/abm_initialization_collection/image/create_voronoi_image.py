@@ -46,6 +46,7 @@ def create_boundary_mask(array: np.ndarray, iterations: int) -> np.ndarray:
     :
         Boundary mask array.
     """
+
     mask = np.zeros(array.shape, dtype="uint8")
     mask[array != 0] = 1
 
@@ -64,7 +65,7 @@ def get_mask_bounds(array: np.ndarray, target_range: int) -> tuple[int, int]:
     Calculates the indices of z axis bounds with given target range.
 
     If the current range between z axis bounds (the minimum and maximum
-    indicies in the z axis where there exist non-zero entries) is wider than
+    indices in the z axis where there exist non-zero entries) is wider than
     the target range, the current bound indices are returned.
 
     Parameters
@@ -79,6 +80,7 @@ def get_mask_bounds(array: np.ndarray, target_range: int) -> tuple[int, int]:
     :
         Lower and upper bound indices.
     """
+
     lower_bound, upper_bound = np.where(np.any(array, axis=(1, 2)))[0][[0, -1]]
     current_range = upper_bound - lower_bound + 1
 
@@ -108,6 +110,7 @@ def get_array_slices(array: np.ndarray) -> tuple[slice, slice, slice]:
     :
         Slices in the z, y, and x directions.
     """
+
     zsize, ysize, xsize = array.shape
 
     zmin, zmax = np.where(np.any(array, axis=(1, 2)))[0][[0, -1]]
@@ -136,6 +139,7 @@ def calculate_voronoi_array(array: np.ndarray) -> np.ndarray:
     :
         Voronoi array.
     """
+
     distances = distance_transform_edt(array == 0, return_distances=False, return_indices=True)
     distances = distances.astype("uint16", copy=False)
 
