@@ -3,7 +3,7 @@ from unittest import mock
 
 import numpy as np
 import pandas as pd
-from aicsimageio import AICSImage
+from bioio import BioImage
 
 from abm_initialization_collection.sample.get_image_samples import get_image_samples
 
@@ -29,7 +29,7 @@ class TestGetImageSamples(unittest.TestCase):
             (1, 0, 1),
         ]
 
-        image_mock = mock.Mock(spec=AICSImage)
+        image_mock = mock.Mock(spec=BioImage)
         image_mock.get_image_data.return_value = array
 
         expected_samples = [
