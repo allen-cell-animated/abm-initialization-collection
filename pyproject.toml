@@ -15,7 +15,7 @@ numpy = "^1.24.2"
 pandas = "^1.5.3"
 matplotlib = "^3.7.0"
 hexalattice = "^1.2.1"
-aicsimageio = "^4.9.4"
+bioio = "^1.0.0"
 scikit-image = "^0.19.3"
 scipy = "^1.9.3"
 

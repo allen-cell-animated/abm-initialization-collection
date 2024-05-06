@@ -1,8 +1,8 @@
 import pandas as pd
-from aicsimageio import AICSImage
+from bioio import BioImage
 
 
-def get_image_samples(image: AICSImage, sample_indices: list, channel: int) -> pd.DataFrame:
+def get_image_samples(image: BioImage, sample_indices: list, channel: int) -> pd.DataFrame:
     """
     Sample image at given indices into list of (id, x, y, z) samples.
 

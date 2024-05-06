@@ -1,13 +1,11 @@
 from math import floor
 
 import numpy as np
-from aicsimageio import AICSImage
+from bioio import BioImage
 from scipy.ndimage import binary_dilation, binary_fill_holes, distance_transform_edt
 
 
-def create_voronoi_image(
-    image: AICSImage, channel: int, iterations: int, height: int
-) -> np.ndarray:
+def create_voronoi_image(image: BioImage, channel: int, iterations: int, height: int) -> np.ndarray:
     array = image.get_image_data("ZYX", T=0, C=channel)
 
     # Create artificial boundary for voronoi.
