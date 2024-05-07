@@ -1,7 +1,7 @@
-from aicsimageio import AICSImage
+from bioio import BioImage
 
 
-def get_image_bounds(image: AICSImage) -> tuple[int, int, int]:
+def get_image_bounds(image: BioImage) -> tuple[int, int, int]:
     """
     Extracts image bounds in the x, y, and z directions.
 

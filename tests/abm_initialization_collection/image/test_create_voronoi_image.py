@@ -2,7 +2,7 @@ import unittest
 from unittest import mock
 
 import numpy as np
-from aicsimageio import AICSImage
+from bioio import BioImage
 
 from abm_initialization_collection.image.create_voronoi_image import (
     calculate_voronoi_array,
@@ -126,7 +126,7 @@ class TestCreateVoronoiImage(unittest.TestCase):
             ]
         )
 
-        image_mock = mock.Mock(spec=AICSImage)
+        image_mock = mock.Mock(spec=BioImage)
         image_mock.get_image_data.return_value = array
 
         voronoi = create_voronoi_image(image_mock, channel, iterations, height)
