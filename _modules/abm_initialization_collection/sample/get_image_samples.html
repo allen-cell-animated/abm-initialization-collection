@@ -222,10 +222,10 @@
         <article role="main">
           <h1>Source code for abm_initialization_collection.sample.get_image_samples</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">aicsimageio</span> <span class="kn">import</span> <span class="n">AICSImage</span>
+<span class="kn">from</span> <span class="nn">bioio</span> <span class="kn">import</span> <span class="n">BioImage</span>
 
 
-<div class="viewcode-block" id="get_image_samples"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.sample.get_image_samples.html#abm_initialization_collection.sample.get_image_samples.get_image_samples">[docs]</a><span class="k">def</span> <span class="nf">get_image_samples</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">AICSImage</span><span class="p">,</span> <span class="n">sample_indices</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<div class="viewcode-block" id="get_image_samples"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.sample.get_image_samples.html#abm_initialization_collection.sample.get_image_samples.get_image_samples">[docs]</a><span class="k">def</span> <span class="nf">get_image_samples</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">BioImage</span><span class="p">,</span> <span class="n">sample_indices</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Sample image at given indices into list of (id, x, y, z) samples.</span>
 
@@ -260,7 +260,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Jessica S. Yu, Allen Institute for Cell Science
+                Copyright &#169; 2024, Jessica S. Yu, Allen Institute for Cell Science
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

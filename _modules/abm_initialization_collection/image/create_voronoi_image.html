@@ -224,13 +224,11 @@
 <span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">floor</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">aicsimageio</span> <span class="kn">import</span> <span class="n">AICSImage</span>
+<span class="kn">from</span> <span class="nn">bioio</span> <span class="kn">import</span> <span class="n">BioImage</span>
 <span class="kn">from</span> <span class="nn">scipy.ndimage</span> <span class="kn">import</span> <span class="n">binary_dilation</span><span class="p">,</span> <span class="n">binary_fill_holes</span><span class="p">,</span> <span class="n">distance_transform_edt</span>
 
 
-<div class="viewcode-block" id="create_voronoi_image"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.create_voronoi_image.html#abm_initialization_collection.image.create_voronoi_image.create_voronoi_image">[docs]</a><span class="k">def</span> <span class="nf">create_voronoi_image</span><span class="p">(</span>
-    <span class="n">image</span><span class="p">:</span> <span class="n">AICSImage</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">iterations</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<div class="viewcode-block" id="create_voronoi_image"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.create_voronoi_image.html#abm_initialization_collection.image.create_voronoi_image.create_voronoi_image">[docs]</a><span class="k">def</span> <span class="nf">create_voronoi_image</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">BioImage</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">iterations</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
     <span class="n">array</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">(</span><span class="s2">&quot;ZYX&quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span>
 
     <span class="c1"># Create artificial boundary for voronoi.</span>
@@ -384,7 +382,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2023, Jessica S. Yu, Allen Institute for Cell Science
+                Copyright &#169; 2024, Jessica S. Yu, Allen Institute for Cell Science
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
