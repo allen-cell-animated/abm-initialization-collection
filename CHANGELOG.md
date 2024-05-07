@@ -1,3 +1,12 @@
+# [v0.6.1](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.6.1) - 2024-05-07
+
+> Compare with [v0.6.0](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.6.0...v0.6.1)
+
+### Admin
+
+- Migrate from aicsimageio to bioio by [@jessicasyu](https://github.com/jessicasyu) in [#38](https://github.com/allen-cell-animated/abm-initialization-collection/pull/38)
+- Fix release workflow by [@jessicasyu](https://github.com/jessicasyu) in [#39](https://github.com/allen-cell-animated/abm-initialization-collection/pull/39)
+
 # [v0.6.0](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.6.0) - 2023-10-18
 
 > Compare with [v0.5.2](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.5.2...v0.6.0)
