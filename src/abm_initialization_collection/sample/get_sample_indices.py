@@ -32,6 +32,7 @@ def get_sample_indices(
     :
         List of sample indices.
     """
+
     if grid == "rect":
         return get_rect_sample_indices(bounds, resolution, scale_xy, scale_z)
 
@@ -66,6 +67,7 @@ def get_rect_sample_indices(
     :
         List of sample indices.
     """
+
     increment_z = round(resolution / scale_z)
     increment_xy = round(resolution / scale_xy)
 
@@ -103,6 +105,7 @@ def get_hex_sample_indices(
     :
         List of sample indices.
     """
+
     increment_z = round(resolution / scale_z)
     increment_xy = round(resolution / scale_xy)
 

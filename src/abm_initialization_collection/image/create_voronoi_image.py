@@ -6,6 +6,26 @@ from scipy.ndimage import binary_dilation, binary_fill_holes, distance_transform
 
 
 def create_voronoi_image(image: BioImage, channel: int, iterations: int, height: int) -> np.ndarray:
+    """
+    Apply Voronoi tessellation to image.
+
+    Parameters
+    ----------
+    image
+        Segmentation image.
+    channel
+        Image channel.
+    iterations
+        Number of boundary estimation steps.
+    height
+        Target height in voxels.
+
+    Returns
+    -------
+    :
+        Voronoi tessellation.
+    """
+
     array = image.get_image_data("ZYX", T=0, C=channel)
 
     # Create artificial boundary for voronoi.

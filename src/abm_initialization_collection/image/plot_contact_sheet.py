@@ -15,6 +15,26 @@ mpl.rc("axes", titlesize=10, titleweight="bold")
 def plot_contact_sheet(
     data: pd.DataFrame, reference: Optional[pd.DataFrame] = None
 ) -> mpl.figure.Figure:
+    """
+    Plot contact sheet of images for each z slice.
+
+    Each z slices is plotted on a separate subplot in the contact sheet. If a
+    reference is given, the reference is used to determine x and y bounds and
+    coordinates that only exist in the reference are shown in gray.
+
+    Parameters
+    ----------
+    data
+        Sampled data with x, y, and z coordinates.
+    reference
+        Reference data with x, y, and z coordinates.
+
+    Returns
+    -------
+    :
+        Contact sheet figure.
+    """
+
     z_layers = sorted(data.z.unique() if reference is None else reference.z.unique())
 
     n_rows, n_cols, indices = separate_rows_cols(z_layers)
@@ -68,6 +88,20 @@ def plot_contact_sheet(
 
 
 def separate_rows_cols(items: list[str]) -> tuple[int, int, list[tuple[int, int, Optional[int]]]]:
+    """
+    Separate list of items into approximately equal number of indexed rows and columns.
+
+    Parameters
+    ----------
+    items
+        List of items.
+
+    Returns
+    -------
+    :
+        Number of rows, number of columns, and indices for each item.
+    """
+
     n_items = len(items)
     n_cols = ceil(sqrt(len(items)))
     n_rows = ceil(len(items) / n_cols)
@@ -81,6 +115,22 @@ def separate_rows_cols(items: list[str]) -> tuple[int, int, list[tuple[int, int,
 def make_subplots(
     n_rows: int, n_cols: int
 ) -> tuple[mpl.figure.Figure, Union[mpl.axes.Axes, np.ndarray]]:
+    """
+    Create subplots for specified number of rows and columns.
+
+    Parameters
+    ----------
+    n_rows
+        Number of rows in contact sheet plot.
+    n_cols
+        Number of columns in contact sheet plot.
+
+    Returns
+    -------
+    :
+        Figure and axes objects.
+    """
+
     plt.close("all")
     fig, axs = plt.subplots(n_rows, n_cols, sharex="all", sharey="all")
     return fig, axs
@@ -89,6 +139,28 @@ def make_subplots(
 def select_axes(
     axs: Union[mpl.axes.Axes, np.ndarray], i: int, j: int, n_rows: int, n_cols: int
 ) -> mpl.axes.Axes:
+    """
+    Select the axes object for the given indexed location.
+
+    Parameters
+    ----------
+    axs
+        Axes object.
+    i
+        Row index.
+    j
+        Column index.
+    n_rows
+        Number of rows in contact sheet plot.
+    n_cols
+        Number of columns in contact sheet plot.
+
+    Returns
+    -------
+    mpl.axes.Axes
+        Axes object at indexed location.
+    """
+
     if n_rows == 1 and n_cols == 1:
         return axs
     if n_rows == 1:
