@@ -18,6 +18,7 @@ def filter_coordinate_bounds(coordinates: list, radius: float, center: bool = Tr
     :
         Filtered list of coordinates.
     """
+
     filtered_coordinates = []
     x_center, y_center, _ = np.array(coordinates).mean(axis=0)
 
