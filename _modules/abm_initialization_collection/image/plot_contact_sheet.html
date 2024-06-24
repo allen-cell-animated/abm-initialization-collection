@@ -238,6 +238,26 @@
 <div class="viewcode-block" id="plot_contact_sheet"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.plot_contact_sheet.html#abm_initialization_collection.image.plot_contact_sheet.plot_contact_sheet">[docs]</a><span class="k">def</span> <span class="nf">plot_contact_sheet</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">reference</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">mpl</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">Figure</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Plot contact sheet of images for each z slice.</span>
+
+<span class="sd">    Each z slices is plotted on a separate subplot in the contact sheet. If a</span>
+<span class="sd">    reference is given, the reference is used to determine x and y bounds and</span>
+<span class="sd">    coordinates that only exist in the reference are shown in gray.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data</span>
+<span class="sd">        Sampled data with x, y, and z coordinates.</span>
+<span class="sd">    reference</span>
+<span class="sd">        Reference data with x, y, and z coordinates.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        Contact sheet figure.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">z_layers</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="k">if</span> <span class="n">reference</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">reference</span><span class="o">.</span><span class="n">z</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 
     <span class="n">n_rows</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">separate_rows_cols</span><span class="p">(</span><span class="n">z_layers</span><span class="p">)</span>
@@ -291,6 +311,20 @@
 
 
 <div class="viewcode-block" id="separate_rows_cols"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.plot_contact_sheet.html#abm_initialization_collection.image.plot_contact_sheet.separate_rows_cols">[docs]</a><span class="k">def</span> <span class="nf">separate_rows_cols</span><span class="p">(</span><span class="n">items</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Separate list of items into approximately equal number of indexed rows and columns.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    items</span>
+<span class="sd">        List of items.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        Number of rows, number of columns, and indices for each item.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">n_items</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
     <span class="n">n_cols</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)))</span>
     <span class="n">n_rows</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_cols</span><span class="p">)</span>
@@ -304,6 +338,22 @@
 <div class="viewcode-block" id="make_subplots"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.plot_contact_sheet.html#abm_initialization_collection.image.plot_contact_sheet.make_subplots">[docs]</a><span class="k">def</span> <span class="nf">make_subplots</span><span class="p">(</span>
     <span class="n">n_rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">:</span> <span class="nb">int</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">mpl</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">Figure</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">mpl</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">Axes</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create subplots for specified number of rows and columns.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n_rows</span>
+<span class="sd">        Number of rows in contact sheet plot.</span>
+<span class="sd">    n_cols</span>
+<span class="sd">        Number of columns in contact sheet plot.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        Figure and axes objects.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
     <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n_rows</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span></div>
@@ -312,6 +362,28 @@
 <div class="viewcode-block" id="select_axes"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.plot_contact_sheet.html#abm_initialization_collection.image.plot_contact_sheet.select_axes">[docs]</a><span class="k">def</span> <span class="nf">select_axes</span><span class="p">(</span>
     <span class="n">axs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">mpl</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">Axes</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n_rows</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">:</span> <span class="nb">int</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">mpl</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">Axes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Select the axes object for the given indexed location.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    axs</span>
+<span class="sd">        Axes object.</span>
+<span class="sd">    i</span>
+<span class="sd">        Row index.</span>
+<span class="sd">    j</span>
+<span class="sd">        Column index.</span>
+<span class="sd">    n_rows</span>
+<span class="sd">        Number of rows in contact sheet plot.</span>
+<span class="sd">    n_cols</span>
+<span class="sd">        Number of columns in contact sheet plot.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    mpl.axes.Axes</span>
+<span class="sd">        Axes object at indexed location.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="n">n_rows</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">n_cols</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">axs</span>
     <span class="k">if</span> <span class="n">n_rows</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>

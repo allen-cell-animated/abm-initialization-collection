@@ -229,6 +229,26 @@
 
 
 <div class="viewcode-block" id="create_voronoi_image"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.create_voronoi_image.html#abm_initialization_collection.image.create_voronoi_image.create_voronoi_image">[docs]</a><span class="k">def</span> <span class="nf">create_voronoi_image</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">BioImage</span><span class="p">,</span> <span class="n">channel</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">iterations</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply Voronoi tessellation to image.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image</span>
+<span class="sd">        Segmentation image.</span>
+<span class="sd">    channel</span>
+<span class="sd">        Image channel.</span>
+<span class="sd">    iterations</span>
+<span class="sd">        Number of boundary estimation steps.</span>
+<span class="sd">    height</span>
+<span class="sd">        Target height in voxels.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        Voronoi tessellation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">array</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">(</span><span class="s2">&quot;ZYX&quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="n">channel</span><span class="p">)</span>
 
     <span class="c1"># Create artificial boundary for voronoi.</span>

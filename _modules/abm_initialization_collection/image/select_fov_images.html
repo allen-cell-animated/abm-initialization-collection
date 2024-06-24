@@ -228,6 +228,31 @@
 <div class="viewcode-block" id="select_fov_images"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.select_fov_images.html#abm_initialization_collection.image.select_fov_images.select_fov_images">[docs]</a><span class="k">def</span> <span class="nf">select_fov_images</span><span class="p">(</span>
     <span class="n">metadata</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">cells_per_fov</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bins</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">counts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Selects FOV images from dataset within each volume bin.</span>
+
+<span class="sd">    Selected FOVs must not contains any outliers or cells in a state other than</span>
+<span class="sd">    M0. Selected FOVs will have exactly the number of specified cells. Average</span>
+<span class="sd">    volume of all cells in the FOV are used to determine which volume bin the</span>
+<span class="sd">    FOV falls in. FOVs are evaluated in the order they appear in the metadata.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    metadata</span>
+<span class="sd">       Quilt package metadata for FOV images.</span>
+<span class="sd">    cells_per_fov</span>
+<span class="sd">        Number of cells per FOV.</span>
+<span class="sd">    bins</span>
+<span class="sd">        Cell volume bin boundaries.</span>
+<span class="sd">    counts</span>
+<span class="sd">        Number of FOVs to select from each cell volume bin.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :</span>
+<span class="sd">        List of selected FOV image paths and cell ids</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">total_count</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
     <span class="n">bin_counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
     <span class="n">fovs</span> <span class="o">=</span> <span class="p">[]</span>
@@ -238,9 +263,9 @@
 
         <span class="k">if</span> <span class="n">no_outliers</span> <span class="ow">and</span> <span class="n">only_m0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">seg_group</span><span class="p">)</span> <span class="o">==</span> <span class="n">cells_per_fov</span><span class="p">:</span>
             <span class="n">mean</span> <span class="o">=</span> <span class="n">seg_group</span><span class="p">[</span><span class="s2">&quot;MEM_shape_volume&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-            <span class="n">bin_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">bins</span><span class="p">)</span>
+            <span class="n">bin_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">bins</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 
-            <span class="k">if</span> <span class="n">bin_counts</span><span class="p">[</span><span class="n">bin_index</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">counts</span><span class="p">[</span><span class="n">bin_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">bin_counts</span><span class="p">[</span><span class="n">bin_index</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">counts</span><span class="p">[</span><span class="n">bin_index</span><span class="p">]:</span>
                 <span class="n">bin_counts</span><span class="p">[</span><span class="n">bin_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">bin_counts</span><span class="p">[</span><span class="n">bin_index</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
                 <span class="n">key</span> <span class="o">=</span> <span class="n">fov_seg_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
                 <span class="n">fovs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>

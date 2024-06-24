@@ -227,7 +227,25 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.image.select_fov_images.select_fov_images">
 <span class="sig-name descname"><span class="pre">select_fov_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cells_per_fov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/image/select_fov_images.html#select_fov_images"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.image.select_fov_images.select_fov_images" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Selects FOV images from dataset within each volume bin.</p>
+<p>Selected FOVs must not contains any outliers or cells in a state other than
+M0. Selected FOVs will have exactly the number of specified cells. Average
+volume of all cells in the FOV are used to determine which volume bin the
+FOV falls in. FOVs are evaluated in the order they appear in the metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>metadata</strong> – Quilt package metadata for FOV images.</p></li>
+<li><p><strong>cells_per_fov</strong> – Number of cells per FOV.</p></li>
+<li><p><strong>bins</strong> – Cell volume bin boundaries.</p></li>
+<li><p><strong>counts</strong> – Number of FOVs to select from each cell volume bin.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of selected FOV image paths and cell ids</p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 
