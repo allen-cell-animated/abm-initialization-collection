@@ -1,17 +1,20 @@
-from typing import Optional
+from __future__ import annotations
 
-import pandas as pd
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 
 def scale_sample_coordinates(
     samples: pd.DataFrame,
-    coordinate_type: Optional[str],
+    coordinate_type: str | None,
     resolution: float,
     scale_xy: float,
     scale_z: float,
 ) -> pd.DataFrame:
     """
-    Scales sampled coordinates using to given coordinate type.
+    Scale sampled coordinates using to given coordinate type.
 
     The "absolute" coordinate type scales sample index coordinate into absolute
     positions (in um).

@@ -6,7 +6,7 @@ def select_fov_images(
     metadata: pd.DataFrame, cells_per_fov: int, bins: list[int], counts: list[int]
 ) -> list[dict]:
     """
-    Selects FOV images from dataset within each volume bin.
+    Select FOV images from dataset within each volume bin.
 
     Selected FOVs must not contains any outliers or cells in a state other than
     M0. Selected FOVs will have exactly the number of specified cells. Average

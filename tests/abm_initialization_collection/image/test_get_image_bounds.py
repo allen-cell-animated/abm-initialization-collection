@@ -7,7 +7,7 @@ from abm_initialization_collection.image.get_image_bounds import get_image_bound
 
 
 class TestGetImageBounds(unittest.TestCase):
-    def test_get_image_bounds(self) -> None:
+    def test_get_image_bounds(self):
         # Shape dimensions given in TCZYX order
         shape = (100, 200, 300, 400, 500)
 
@@ -16,7 +16,7 @@ class TestGetImageBounds(unittest.TestCase):
         expected_bounds = (500, 400, 300)
 
         bounds = get_image_bounds(image_mock)
-        self.assertEquals(expected_bounds, bounds)
+        self.assertEqual(expected_bounds, bounds)
 
 
 if __name__ == "__main__":

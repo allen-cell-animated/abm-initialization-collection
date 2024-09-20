@@ -14,7 +14,7 @@ from abm_initialization_collection.image.create_voronoi_image import (
 
 
 class TestCreateVoronoiImage(unittest.TestCase):
-    def test_create_voronoi_image(self) -> None:
+    def test_create_voronoi_image(self):
         array = np.array(
             [
                 [
@@ -132,7 +132,7 @@ class TestCreateVoronoiImage(unittest.TestCase):
         voronoi = create_voronoi_image(image_mock, channel, iterations, height)
         self.assertTrue(np.array_equal(expected_voronoi, voronoi))
 
-    def test_create_boundary_mask_without_holes(self) -> None:
+    def test_create_boundary_mask_without_holes(self):
         array = np.array(
             [
                 [
@@ -188,7 +188,7 @@ class TestCreateVoronoiImage(unittest.TestCase):
         mask = create_boundary_mask(array, iterations=2)
         self.assertTrue(np.array_equal(expected_mask, mask))
 
-    def test_create_boundary_mask_with_holes(self) -> None:
+    def test_create_boundary_mask_with_holes(self):
         array = np.array(
             [
                 [
@@ -230,7 +230,7 @@ class TestCreateVoronoiImage(unittest.TestCase):
         mask = create_boundary_mask(array, iterations=2)
         self.assertTrue(np.array_equal(expected_mask, mask))
 
-    def test_get_mask_bounds_below_current_range(self) -> None:
+    def test_get_mask_bounds_below_current_range(self):
         lower_bound = 7
         upper_bound = 11
         array = np.zeros((20, 1, 1))
@@ -241,7 +241,7 @@ class TestCreateVoronoiImage(unittest.TestCase):
         updated_bounds = get_mask_bounds(array, target_range)
         self.assertTupleEqual(expected_bounds, updated_bounds)
 
-    def test_get_mask_bounds_above_current_range(self) -> None:
+    def test_get_mask_bounds_above_current_range(self):
         lower_bound = 7
         upper_bound = 11
         array = np.zeros((20, 1, 1))
@@ -252,7 +252,7 @@ class TestCreateVoronoiImage(unittest.TestCase):
         updated_bounds = get_mask_bounds(array, target_range)
         self.assertTupleEqual(expected_bounds, updated_bounds)
 
-    def test_get_array_slices_bounds_within_shape(self) -> None:
+    def test_get_array_slices_bounds_within_shape(self):
         array = np.zeros((11, 11, 11))
         array[2, 5, 5] = 1
         array[7, 5, 5] = 1
@@ -265,7 +265,7 @@ class TestCreateVoronoiImage(unittest.TestCase):
         slices = get_array_slices(array)
         self.assertTupleEqual(expected_slices, slices)
 
-    def test_get_array_slices_bounds_outside_shape(self) -> None:
+    def test_get_array_slices_bounds_outside_shape(self):
         array = np.zeros((3, 5, 7))
         array[0, 2, 3] = 1
         array[2, 2, 3] = 1
@@ -278,7 +278,7 @@ class TestCreateVoronoiImage(unittest.TestCase):
         slices = get_array_slices(array)
         self.assertTupleEqual(expected_slices, slices)
 
-    def test_calculate_voronoi_array(self) -> None:
+    def test_calculate_voronoi_array(self):
         array = np.array(
             [
                 [

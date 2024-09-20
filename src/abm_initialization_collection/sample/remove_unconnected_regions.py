@@ -8,15 +8,15 @@ def remove_unconnected_regions(
     samples: pd.DataFrame, unconnected_threshold: float, unconnected_filter: str
 ) -> pd.DataFrame:
     """
-    Removes unconnected regions.
+    Remove unconnected regions.
 
     Parameters
     ----------
     samples
         Sample cell ids and coordinates.
-    threshold
+    unconnected_threshold
         Distance for removing unconnected regions.
-    filter
+    unconnected_filter
         Filter type for assigning unconnected coordinates.
 
     Returns
@@ -31,12 +31,13 @@ def remove_unconnected_regions(
     if unconnected_filter == "distance":
         return remove_unconnected_by_distance(samples, unconnected_threshold)
 
-    raise ValueError(f"invalid filter type {unconnected_filter}")
+    message = f"invalid filter type {unconnected_filter}"
+    raise ValueError(message)
 
 
 def remove_unconnected_by_connectivity(samples: pd.DataFrame) -> pd.DataFrame:
     """
-    Removes unconnected regions based on simple connectivity.
+    Remove unconnected regions based on simple connectivity.
 
     Parameters
     ----------
@@ -68,13 +69,11 @@ def remove_unconnected_by_connectivity(samples: pd.DataFrame) -> pd.DataFrame:
     # Iterate through all regions and copy the largest connected region to array.
     ids_added = set()
     for index, _ in regions_sorted:
-        cell_id = list(set(array[labels == index]))[0]
+        cell_id = next(iter(set(array[labels == index])))
 
         if cell_id not in ids_added:
             array_connected[labels == index] = cell_id
             ids_added.add(cell_id)
-        else:
-            print(f"Skipping unconnected region for cell id {cell_id}")
 
     # Convert back to dataframe.
     samples_connected = convert_to_dataframe(array_connected, minimums)
@@ -83,7 +82,7 @@ def remove_unconnected_by_connectivity(samples: pd.DataFrame) -> pd.DataFrame:
 
 def remove_unconnected_by_distance(samples: pd.DataFrame, threshold: float) -> pd.DataFrame:
     """
-    Removes unconnected regions based on distance.
+    Remove unconnected regions based on distance.
 
     Parameters
     ----------
@@ -120,7 +119,7 @@ def remove_unconnected_by_distance(samples: pd.DataFrame, threshold: float) -> p
 
 def get_sample_minimums(samples: pd.DataFrame) -> tuple[int, int, int]:
     """
-    Gets minimums in x, y, and z directions for samples.
+    Get minimums in x, y, and z directions for samples.
 
     Parameters
     ----------
@@ -135,13 +134,12 @@ def get_sample_minimums(samples: pd.DataFrame) -> tuple[int, int, int]:
     min_x = min(samples.x)
     min_y = min(samples.y)
     min_z = min(samples.z)
-    minimums = (min_x, min_y, min_z)
-    return minimums
+    return (min_x, min_y, min_z)
 
 
 def get_sample_maximums(samples: pd.DataFrame) -> tuple[int, int, int]:
     """
-    Gets maximums in x, y, and z directions for samples.
+    Get maximums in x, y, and z directions for samples.
 
     Parameters
     ----------
@@ -156,8 +154,7 @@ def get_sample_maximums(samples: pd.DataFrame) -> tuple[int, int, int]:
     max_x = max(samples.x)
     max_y = max(samples.y)
     max_z = max(samples.z)
-    maximums = (max_x, max_y, max_z)
-    return maximums
+    return (max_x, max_y, max_z)
 
 
 def convert_to_integer_array(
@@ -166,7 +163,7 @@ def convert_to_integer_array(
     maximums: tuple[int, int, int],
 ) -> np.ndarray:
     """
-    Converts ids and coordinate samples to integer array.
+    Convert ids and coordinate samples to integer array.
 
     Parameters
     ----------
@@ -186,7 +183,7 @@ def convert_to_integer_array(
     length, width, height = np.subtract(maximums, minimums).astype("int32")
     array = np.zeros((height + 1, width + 1, length + 1), dtype="int32")
 
-    coordinates = samples[["x", "y", "z"]].values - minimums
+    coordinates = samples[["x", "y", "z"]].to_numpy() - minimums
     array[tuple(np.transpose(np.flip(coordinates, axis=1)))] = samples.id
 
     return array
@@ -194,7 +191,7 @@ def convert_to_integer_array(
 
 def convert_to_dataframe(array: np.ndarray, minimums: tuple[int, int, int]) -> pd.DataFrame:
     """
-    Converts integer array to ids and coordinate samples.
+    Convert integer array to ids and coordinate samples.
 
     Parameters
     ----------

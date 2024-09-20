@@ -1,10 +1,14 @@
+from __future__ import annotations
+
 from math import ceil, sqrt
-from typing import Optional, Union
+from typing import TYPE_CHECKING
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 mpl.use("Agg")
 mpl.rc("figure", dpi=200)
@@ -13,7 +17,7 @@ mpl.rc("axes", titlesize=10, titleweight="bold")
 
 
 def plot_contact_sheet(
-    data: pd.DataFrame, reference: Optional[pd.DataFrame] = None
+    data: pd.DataFrame, reference: pd.DataFrame | None = None
 ) -> mpl.figure.Figure:
     """
     Plot contact sheet of images for each z slice.
@@ -66,7 +70,7 @@ def plot_contact_sheet(
 
         if reference is not None:
             z_slice_reference = reference[reference.z == z_layers[k]]
-            filtered = pd.merge(z_slice, z_slice_reference, how="outer", indicator=True)
+            filtered = z_slice.merge(z_slice_reference, how="outer", indicator=True)
             removed = filtered[filtered["_merge"] == "right_only"]
 
             patches = [plt.Circle((x, y), radius=0.3) for x, y in zip(removed.x, removed.y)]
@@ -87,7 +91,7 @@ def plot_contact_sheet(
     return fig
 
 
-def separate_rows_cols(items: list[str]) -> tuple[int, int, list[tuple[int, int, Optional[int]]]]:
+def separate_rows_cols(items: list[str]) -> tuple[int, int, list[tuple[int, int, int | None]]]:
     """
     Separate list of items into approximately equal number of indexed rows and columns.
 
@@ -112,9 +116,7 @@ def separate_rows_cols(items: list[str]) -> tuple[int, int, list[tuple[int, int,
     return n_rows, n_cols, indices
 
 
-def make_subplots(
-    n_rows: int, n_cols: int
-) -> tuple[mpl.figure.Figure, Union[mpl.axes.Axes, np.ndarray]]:
+def make_subplots(n_rows: int, n_cols: int) -> tuple[mpl.figure.Figure, mpl.axes.Axes | np.ndarray]:
     """
     Create subplots for specified number of rows and columns.
 
@@ -137,7 +139,7 @@ def make_subplots(
 
 
 def select_axes(
-    axs: Union[mpl.axes.Axes, np.ndarray], i: int, j: int, n_rows: int, n_cols: int
+    axs: mpl.axes.Axes | np.ndarray, i: int, j: int, n_rows: int, n_cols: int
 ) -> mpl.axes.Axes:
     """
     Select the axes object for the given indexed location.

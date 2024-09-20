@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 
 
-def filter_coordinate_bounds(coordinates: list, radius: float, center: bool = True) -> pd.DataFrame:
+def filter_coordinate_bounds(coordinates: list, radius: float, *, center: bool) -> pd.DataFrame:
     """
-    Filters list for coordinates with given radius.
+    Filter list for coordinates with given radius.
 
     Parameters
     ----------
@@ -12,6 +12,8 @@ def filter_coordinate_bounds(coordinates: list, radius: float, center: bool = Tr
         List of (x, y, z) coordinates.
     radius
         Maximum valid radius of coordinate.
+    center
+        True if coordinates should be centered, False otherwise.
 
     Returns
     -------

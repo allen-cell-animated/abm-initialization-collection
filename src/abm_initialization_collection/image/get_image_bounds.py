@@ -3,7 +3,7 @@ from bioio import BioImage
 
 def get_image_bounds(image: BioImage) -> tuple[int, int, int]:
     """
-    Extracts image bounds in the x, y, and z directions.
+    Extract image bounds in the x, y, and z directions.
 
     Parameters
     ----------
@@ -17,5 +17,4 @@ def get_image_bounds(image: BioImage) -> tuple[int, int, int]:
     """
 
     _, _, z_shape, y_shape, x_shape = image.shape
-    bounds = (x_shape, y_shape, z_shape)
-    return bounds
+    return (x_shape, y_shape, z_shape)

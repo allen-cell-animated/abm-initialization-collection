@@ -36,7 +36,8 @@ def make_grid_coordinates(
     if grid == "hex":
         return make_hex_grid_coordinates(bounds, increment_xy, increment_z)
 
-    raise ValueError(f"invalid grid type {grid}")
+    message = f"invalid grid type {grid}"
+    raise ValueError(message)
 
 
 def make_rect_grid_coordinates(
@@ -68,9 +69,7 @@ def make_rect_grid_coordinates(
     x_indices = np.arange(0, x_bound, increment_xy)
     y_indices = np.arange(0, y_bound, increment_xy)
 
-    coordinates = [(x, y, z) for z in z_indices for x in x_indices for y in y_indices]
-
-    return coordinates
+    return [(x, y, z) for z in z_indices for x in x_indices for y in y_indices]
 
 
 def make_hex_grid_coordinates(
@@ -115,11 +114,9 @@ def make_hex_grid_coordinates(
     x_offsets = [(increment_xy / 2) if z_offset == 1 else 0 for z_offset in z_offsets]
     y_offsets = [(increment_xy / 2) * sqrt(3) / 3 * z_offset for z_offset in z_offsets]
 
-    coordinates = [
+    return [
         (x + x_offset, y + y_offset, z)
         for z, x_offset, y_offset in zip(z_indices, x_offsets, y_offsets)
         for x, y in xy_indices
         if round(x + x_offset) < x_bound and round(y + y_offset) < y_bound
     ]
-
-    return coordinates

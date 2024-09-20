@@ -14,7 +14,7 @@ from abm_initialization_collection.sample.remove_unconnected_regions import (
 
 
 class TestRemoveUnconnectedRegions(unittest.TestCase):
-    def test_remove_unconnected_regions_by_connectivity(self) -> None:
+    def test_remove_unconnected_regions_by_connectivity(self):
         connected_threshold = 0
         samples = pd.DataFrame(
             [
@@ -48,7 +48,7 @@ class TestRemoveUnconnectedRegions(unittest.TestCase):
         filtered_samples = remove_unconnected_regions(samples, connected_threshold, "connectivity")
         self.assertTrue(expected.equals(filtered_samples))
 
-    def test_remove_unconnected_regions_by_distance(self) -> None:
+    def test_remove_unconnected_regions_by_distance(self):
         connected_threshold = 1.5
         samples = pd.DataFrame(
             [
@@ -75,12 +75,12 @@ class TestRemoveUnconnectedRegions(unittest.TestCase):
         filtered_samples = remove_unconnected_regions(samples, connected_threshold, "distance")
         self.assertTrue(expected.equals(filtered_samples))
 
-    def test_remove_unconnected_regions_invalid_filter_throws_exception(self) -> None:
+    def test_remove_unconnected_regions_invalid_filter_throws_exception(self):
         with self.assertRaises(ValueError):
             samples = pd.DataFrame()
             remove_unconnected_regions(samples, 0, "invalid_filter")
 
-    def test_get_sample_minimums(self) -> None:
+    def test_get_sample_minimums(self):
         samples = pd.DataFrame(
             [
                 [1, 0, 3, 10],
@@ -96,7 +96,7 @@ class TestRemoveUnconnectedRegions(unittest.TestCase):
         minimums = get_sample_minimums(samples)
         self.assertTupleEqual(expected_minimums, minimums)
 
-    def test_get_sample_maximums(self) -> None:
+    def test_get_sample_maximums(self):
         samples = pd.DataFrame(
             [
                 [1, 0, 3, 10],
@@ -112,7 +112,7 @@ class TestRemoveUnconnectedRegions(unittest.TestCase):
         maximums = get_sample_maximums(samples)
         self.assertTupleEqual(expected_maximums, maximums)
 
-    def test_convert_to_integer_array(self) -> None:
+    def test_convert_to_integer_array(self):
         samples = pd.DataFrame(
             [
                 [1, 0, 0, 0],
@@ -145,7 +145,7 @@ class TestRemoveUnconnectedRegions(unittest.TestCase):
         array = convert_to_integer_array(samples, minimums, maximums)
         self.assertTrue(np.array_equal(expected_array, array))
 
-    def test_convert_to_dataframe(self) -> None:
+    def test_convert_to_dataframe(self):
         array = np.array(
             [
                 [
@@ -177,7 +177,7 @@ class TestRemoveUnconnectedRegions(unittest.TestCase):
         dataframe = convert_to_dataframe(array, minimums)
         self.assertTrue(expected_dataframe.equals(dataframe))
 
-    def test_get_minimum_distance(self) -> None:
+    def test_get_minimum_distance(self):
         source = np.array([[0, 0, 0]])
         targets = np.array(
             [

@@ -9,7 +9,7 @@ from abm_initialization_collection.sample.remove_edge_regions import (
 
 
 class TestRemoveEdgeRegions(unittest.TestCase):
-    def test_remove_edge_regions(self) -> None:
+    def test_remove_edge_regions(self):
         edge_threshold = 1
         edge_padding = 0
 
@@ -27,7 +27,7 @@ class TestRemoveEdgeRegions(unittest.TestCase):
         filtered_samples = remove_edge_regions(samples, edge_threshold, edge_padding)
         self.assertTrue(expected_samples.equals(filtered_samples))
 
-    def test_find_edge_ids_no_padding_low_threshold(self) -> None:
+    def test_find_edge_ids_no_padding_low_threshold(self):
         padding = 0
         threshold = 0
         samples = pd.DataFrame(
@@ -51,7 +51,7 @@ class TestRemoveEdgeRegions(unittest.TestCase):
         edge_ids = find_edge_ids("x", samples, threshold, padding)
         self.assertListEqual(expected_edge_ids, edge_ids)
 
-    def test_find_edge_ids_no_padding_high_threshold(self) -> None:
+    def test_find_edge_ids_no_padding_high_threshold(self):
         padding = 0
         threshold = 3
         samples = pd.DataFrame(
@@ -75,7 +75,7 @@ class TestRemoveEdgeRegions(unittest.TestCase):
         edge_ids = find_edge_ids("x", samples, threshold, padding)
         self.assertListEqual(expected_edge_ids, edge_ids)
 
-    def test_find_edge_ids_with_padding_low_threshold(self) -> None:
+    def test_find_edge_ids_with_padding_low_threshold(self):
         padding = 1
         threshold = 0
         samples = pd.DataFrame(
@@ -99,7 +99,7 @@ class TestRemoveEdgeRegions(unittest.TestCase):
         edge_ids = find_edge_ids("x", samples, threshold, padding)
         self.assertListEqual(expected_edge_ids, edge_ids)
 
-    def test_find_edge_ids_with_padding_high_threshold(self) -> None:
+    def test_find_edge_ids_with_padding_high_threshold(self):
         padding = 1
         threshold = 3
         samples = pd.DataFrame(

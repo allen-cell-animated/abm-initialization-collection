@@ -9,7 +9,7 @@ from abm_initialization_collection.coordinate.make_grid_coordinates import (
 
 
 class TestMakeGridCoordinates(unittest.TestCase):
-    def test_make_grid_coordinates_rect_grid(self) -> None:
+    def test_make_grid_coordinates_rect_grid(self):
         bounds = (4, 6, 5)
         expected_coordinates = [(x, y, z) for x in range(4) for y in range(6) for z in range(5)]
 
@@ -17,7 +17,7 @@ class TestMakeGridCoordinates(unittest.TestCase):
 
         self.assertSetEqual(set(expected_coordinates), set(coordinates))
 
-    def test_make_grid_coordinates_hex_grid(self) -> None:
+    def test_make_grid_coordinates_hex_grid(self):
         bounds = (2, 3, 4)
         delta = sqrt(3)
 
@@ -43,20 +43,20 @@ class TestMakeGridCoordinates(unittest.TestCase):
             (x, y, z)
             for hex_indices in all_hex_indices
             for x, y, z in hex_indices
-            if round(x) < 2 and round(y) < 3
+            if round(x) < bounds[0] and round(y) < bounds[1]
         ]
 
         coordinates = make_grid_coordinates("hex", bounds, 1, 1)
 
         self.assertSetEqual(set(expected_coordinates), set(coordinates))
 
-    def test_make_grid_coordinates_invalid_grid_throws_exception(self) -> None:
+    def test_make_grid_coordinates_invalid_grid_throws_exception(self):
         with self.assertRaises(ValueError):
             bounds = (0, 0, 0)
             grid = "invalid_grid"
             make_grid_coordinates(grid, bounds, 0, 0)
 
-    def test_make_rect_grid_coordinates(self) -> None:
+    def test_make_rect_grid_coordinates(self):
         bounds = (4, 6, 5)
         xy_increment = 2
         z_increment = 4
@@ -67,7 +67,7 @@ class TestMakeGridCoordinates(unittest.TestCase):
 
         self.assertSetEqual(set(expected_coordinates), set(coordinates))
 
-    def test_make_hex_grid_coordinates(self) -> None:
+    def test_make_hex_grid_coordinates(self):
         bounds = (4, 6, 13)
         xy_increment = 2
         z_increment = 4
@@ -93,7 +93,7 @@ class TestMakeGridCoordinates(unittest.TestCase):
             (x, y, z)
             for hex_indices in all_hex_indices
             for x, y, z in hex_indices
-            if round(x) < 4 and round(y) < 6
+            if round(x) < bounds[0] and round(y) < bounds[1]
         ]
 
         coordinates = make_hex_grid_coordinates(bounds, xy_increment, z_increment)
