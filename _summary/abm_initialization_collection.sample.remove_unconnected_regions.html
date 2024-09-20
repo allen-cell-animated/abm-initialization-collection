@@ -227,13 +227,13 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.remove_unconnected_regions.remove_unconnected_regions">
 <span class="sig-name descname"><span class="pre">remove_unconnected_regions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unconnected_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unconnected_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/remove_unconnected_regions.html#remove_unconnected_regions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.remove_unconnected_regions.remove_unconnected_regions" title="Permalink to this definition">#</a></dt>
-<dd><p>Removes unconnected regions.</p>
+<dd><p>Remove unconnected regions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>samples</strong> – Sample cell ids and coordinates.</p></li>
-<li><p><strong>threshold</strong> – Distance for removing unconnected regions.</p></li>
-<li><p><strong>filter</strong> – Filter type for assigning unconnected coordinates.</p></li>
+<li><p><strong>unconnected_threshold</strong> – Distance for removing unconnected regions.</p></li>
+<li><p><strong>unconnected_filter</strong> – Filter type for assigning unconnected coordinates.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -245,7 +245,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.remove_unconnected_regions.remove_unconnected_by_connectivity">
 <span class="sig-name descname"><span class="pre">remove_unconnected_by_connectivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/remove_unconnected_regions.html#remove_unconnected_by_connectivity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.remove_unconnected_regions.remove_unconnected_by_connectivity" title="Permalink to this definition">#</a></dt>
-<dd><p>Removes unconnected regions based on simple connectivity.</p>
+<dd><p>Remove unconnected regions based on simple connectivity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>samples</strong> – Sample cell ids and coordinates.</p>
@@ -259,7 +259,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.remove_unconnected_regions.remove_unconnected_by_distance">
 <span class="sig-name descname"><span class="pre">remove_unconnected_by_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/remove_unconnected_regions.html#remove_unconnected_by_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.remove_unconnected_regions.remove_unconnected_by_distance" title="Permalink to this definition">#</a></dt>
-<dd><p>Removes unconnected regions based on distance.</p>
+<dd><p>Remove unconnected regions based on distance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -276,7 +276,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.remove_unconnected_regions.get_sample_minimums">
 <span class="sig-name descname"><span class="pre">get_sample_minimums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/remove_unconnected_regions.html#get_sample_minimums"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.remove_unconnected_regions.get_sample_minimums" title="Permalink to this definition">#</a></dt>
-<dd><p>Gets minimums in x, y, and z directions for samples.</p>
+<dd><p>Get minimums in x, y, and z directions for samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>samples</strong> – Sample cell ids and coordinates.</p>
@@ -290,7 +290,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.remove_unconnected_regions.get_sample_maximums">
 <span class="sig-name descname"><span class="pre">get_sample_maximums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/remove_unconnected_regions.html#get_sample_maximums"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.remove_unconnected_regions.get_sample_maximums" title="Permalink to this definition">#</a></dt>
-<dd><p>Gets maximums in x, y, and z directions for samples.</p>
+<dd><p>Get maximums in x, y, and z directions for samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>samples</strong> – Sample cell ids and coordinates.</p>
@@ -304,7 +304,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.remove_unconnected_regions.convert_to_integer_array">
 <span class="sig-name descname"><span class="pre">convert_to_integer_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/remove_unconnected_regions.html#convert_to_integer_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.remove_unconnected_regions.convert_to_integer_array" title="Permalink to this definition">#</a></dt>
-<dd><p>Converts ids and coordinate samples to integer array.</p>
+<dd><p>Convert ids and coordinate samples to integer array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -322,7 +322,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="abm_initialization_collection.sample.remove_unconnected_regions.convert_to_dataframe">
 <span class="sig-name descname"><span class="pre">convert_to_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/abm_initialization_collection/sample/remove_unconnected_regions.html#convert_to_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#abm_initialization_collection.sample.remove_unconnected_regions.convert_to_dataframe" title="Permalink to this definition">#</a></dt>
-<dd><p>Converts integer array to ids and coordinate samples.</p>
+<dd><p>Convert integer array to ids and coordinate samples.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

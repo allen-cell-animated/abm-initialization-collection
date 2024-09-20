@@ -225,9 +225,9 @@
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 
-<div class="viewcode-block" id="filter_coordinate_bounds"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.coordinate.filter_coordinate_bounds.html#abm_initialization_collection.coordinate.filter_coordinate_bounds.filter_coordinate_bounds">[docs]</a><span class="k">def</span> <span class="nf">filter_coordinate_bounds</span><span class="p">(</span><span class="n">coordinates</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">center</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<div class="viewcode-block" id="filter_coordinate_bounds"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.coordinate.filter_coordinate_bounds.html#abm_initialization_collection.coordinate.filter_coordinate_bounds.filter_coordinate_bounds">[docs]</a><span class="k">def</span> <span class="nf">filter_coordinate_bounds</span><span class="p">(</span><span class="n">coordinates</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">radius</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">center</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Filters list for coordinates with given radius.</span>
+<span class="sd">    Filter list for coordinates with given radius.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -235,6 +235,8 @@
 <span class="sd">        List of (x, y, z) coordinates.</span>
 <span class="sd">    radius</span>
 <span class="sd">        Maximum valid radius of coordinate.</span>
+<span class="sd">    center</span>
+<span class="sd">        True if coordinates should be centered, False otherwise.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>

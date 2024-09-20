@@ -259,7 +259,8 @@
     <span class="k">if</span> <span class="n">grid</span> <span class="o">==</span> <span class="s2">&quot;hex&quot;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">make_hex_grid_coordinates</span><span class="p">(</span><span class="n">bounds</span><span class="p">,</span> <span class="n">increment_xy</span><span class="p">,</span> <span class="n">increment_z</span><span class="p">)</span>
 
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;invalid grid type </span><span class="si">{</span><span class="n">grid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+    <span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;invalid grid type </span><span class="si">{</span><span class="n">grid</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="make_rect_grid_coordinates"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.coordinate.make_grid_coordinates.html#abm_initialization_collection.coordinate.make_grid_coordinates.make_rect_grid_coordinates">[docs]</a><span class="k">def</span> <span class="nf">make_rect_grid_coordinates</span><span class="p">(</span>
@@ -291,9 +292,7 @@
     <span class="n">x_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_bound</span><span class="p">,</span> <span class="n">increment_xy</span><span class="p">)</span>
     <span class="n">y_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_bound</span><span class="p">,</span> <span class="n">increment_xy</span><span class="p">)</span>
 
-    <span class="n">coordinates</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">z_indices</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_indices</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_indices</span><span class="p">]</span>
-
-    <span class="k">return</span> <span class="n">coordinates</span></div>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">z_indices</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_indices</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_indices</span><span class="p">]</span></div>
 
 
 <div class="viewcode-block" id="make_hex_grid_coordinates"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.coordinate.make_grid_coordinates.html#abm_initialization_collection.coordinate.make_grid_coordinates.make_hex_grid_coordinates">[docs]</a><span class="k">def</span> <span class="nf">make_hex_grid_coordinates</span><span class="p">(</span>
@@ -338,14 +337,12 @@
     <span class="n">x_offsets</span> <span class="o">=</span> <span class="p">[(</span><span class="n">increment_xy</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">z_offset</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">z_offset</span> <span class="ow">in</span> <span class="n">z_offsets</span><span class="p">]</span>
     <span class="n">y_offsets</span> <span class="o">=</span> <span class="p">[(</span><span class="n">increment_xy</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">z_offset</span> <span class="k">for</span> <span class="n">z_offset</span> <span class="ow">in</span> <span class="n">z_offsets</span><span class="p">]</span>
 
-    <span class="n">coordinates</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="k">return</span> <span class="p">[</span>
         <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y_offset</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">z</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">,</span> <span class="n">y_offset</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">z_indices</span><span class="p">,</span> <span class="n">x_offsets</span><span class="p">,</span> <span class="n">y_offsets</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">xy_indices</span>
         <span class="k">if</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">x_offset</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">x_bound</span> <span class="ow">and</span> <span class="nb">round</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">y_offset</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">y_bound</span>
-    <span class="p">]</span>
-
-    <span class="k">return</span> <span class="n">coordinates</span></div>
+    <span class="p">]</span></div>
 </pre></div>
         </article>
       </div>

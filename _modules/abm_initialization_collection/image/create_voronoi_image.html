@@ -273,7 +273,7 @@
 
 <div class="viewcode-block" id="create_boundary_mask"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.create_voronoi_image.html#abm_initialization_collection.image.create_voronoi_image.create_boundary_mask">[docs]</a><span class="k">def</span> <span class="nf">create_boundary_mask</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">iterations</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Creates filled boundary mask around regions in array.</span>
+<span class="sd">    Create filled boundary mask around regions in array.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -303,7 +303,7 @@
 
 <div class="viewcode-block" id="get_mask_bounds"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.create_voronoi_image.html#abm_initialization_collection.image.create_voronoi_image.get_mask_bounds">[docs]</a><span class="k">def</span> <span class="nf">get_mask_bounds</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">target_range</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Calculates the indices of z axis bounds with given target range.</span>
+<span class="sd">    Calculate the indices of z axis bounds with given target range.</span>
 
 <span class="sd">    If the current range between z axis bounds (the minimum and maximum</span>
 <span class="sd">    indices in the z axis where there exist non-zero entries) is wider than</span>
@@ -362,13 +362,12 @@
     <span class="n">yslice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">ymin</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">ymax</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">ysize</span><span class="p">))</span>
     <span class="n">xslice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">xmin</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">xmax</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">xsize</span><span class="p">))</span>
 
-    <span class="n">slices</span> <span class="o">=</span> <span class="p">(</span><span class="n">zslice</span><span class="p">,</span> <span class="n">yslice</span><span class="p">,</span> <span class="n">xslice</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">slices</span></div>
+    <span class="k">return</span> <span class="p">(</span><span class="n">zslice</span><span class="p">,</span> <span class="n">yslice</span><span class="p">,</span> <span class="n">xslice</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="calculate_voronoi_array"><a class="viewcode-back" href="../../../_summary/abm_initialization_collection.image.create_voronoi_image.html#abm_initialization_collection.image.create_voronoi_image.calculate_voronoi_array">[docs]</a><span class="k">def</span> <span class="nf">calculate_voronoi_array</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Calculates voronoi on image array using distance transform.</span>
+<span class="sd">    Calculate voronoi on image array using distance transform.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -387,9 +386,7 @@
     <span class="n">coordinates_z</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
     <span class="n">coordinates_y</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
     <span class="n">coordinates_x</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-    <span class="n">voronoi</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">coordinates_z</span><span class="p">,</span> <span class="n">coordinates_y</span><span class="p">,</span> <span class="n">coordinates_x</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">voronoi</span></div>
+    <span class="k">return</span> <span class="n">array</span><span class="p">[</span><span class="n">coordinates_z</span><span class="p">,</span> <span class="n">coordinates_y</span><span class="p">,</span> <span class="n">coordinates_x</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></div>
 </pre></div>
         </article>
       </div>
