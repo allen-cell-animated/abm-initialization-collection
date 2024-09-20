@@ -6,7 +6,7 @@ from abm_initialization_collection.sample.exclude_selected_ids import exclude_se
 
 
 class TestExcludeSelectedIDs(unittest.TestCase):
-    def test_exclude_selected_ids(self) -> None:
+    def test_exclude_selected_ids(self):
         cell_1_data = [[1, 1, 2, 3]]
         cell_2_data = [[2, 1, 2, 1]]
         cell_3_data = [[3, 1, 2, 2]]

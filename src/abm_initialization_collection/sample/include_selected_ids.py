@@ -3,7 +3,7 @@ import pandas as pd
 
 def include_selected_ids(samples: pd.DataFrame, include: list[int]) -> pd.DataFrame:
     """
-    Filters samples to include given ids.
+    Filter samples to include given ids.
 
     Parameters
     ----------

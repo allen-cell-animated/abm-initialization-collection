@@ -39,7 +39,8 @@ def get_sample_indices(
     if grid == "hex":
         return get_hex_sample_indices(bounds, resolution, scale_xy, scale_z)
 
-    raise ValueError(f"invalid grid type {grid}")
+    message = f"invalid grid type {grid}"
+    raise ValueError(message)
 
 
 def get_rect_sample_indices(
@@ -72,9 +73,7 @@ def get_rect_sample_indices(
     increment_xy = round(resolution / scale_xy)
 
     sample_coordinates = make_rect_grid_coordinates(bounds, increment_xy, increment_z)
-    sample_indices = [(round(x), round(y), z) for x, y, z in sample_coordinates]
-
-    return sample_indices
+    return [(round(x), round(y), z) for x, y, z in sample_coordinates]
 
 
 def get_hex_sample_indices(
@@ -110,6 +109,4 @@ def get_hex_sample_indices(
     increment_xy = round(resolution / scale_xy)
 
     sample_coordinates = make_hex_grid_coordinates(bounds, increment_xy, increment_z)
-    sample_indices = [(round(x), round(y), z) for x, y, z in sample_coordinates]
-
-    return sample_indices
+    return [(round(x), round(y), z) for x, y, z in sample_coordinates]

@@ -3,7 +3,7 @@ import pandas as pd
 
 def exclude_selected_ids(samples: pd.DataFrame, exclude: list[int]) -> pd.DataFrame:
     """
-    Filters samples to exclude given ids.
+    Filter samples to exclude given ids.
 
     Parameters
     ----------

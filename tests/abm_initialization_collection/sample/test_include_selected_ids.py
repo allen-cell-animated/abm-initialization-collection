@@ -6,7 +6,7 @@ from abm_initialization_collection.sample.include_selected_ids import include_se
 
 
 class TestIncludeSelectedIDs(unittest.TestCase):
-    def test_include_selected_ids(self) -> None:
+    def test_include_selected_ids(self):
         cell_1_data = [[1, 1, 2, 3]]
         cell_2_data = [[2, 1, 2, 1]]
         cell_3_data = [[3, 1, 2, 2]]

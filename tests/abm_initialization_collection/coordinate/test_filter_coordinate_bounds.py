@@ -8,7 +8,7 @@ from abm_initialization_collection.coordinate.filter_coordinate_bounds import (
 
 
 class TestFilterCoordinateBounds(unittest.TestCase):
-    def test_filter_coordinate_bounds_not_centered(self) -> None:
+    def test_filter_coordinate_bounds_not_centered(self):
         radius = 2
         coordinates = [(0, 2, 0), (0, 4, 1), (1, 6, 2), (1, 2, 3), (2, 4, 4), (2, 6, 5)]
 
@@ -18,7 +18,7 @@ class TestFilterCoordinateBounds(unittest.TestCase):
         filtered_df = filter_coordinate_bounds(coordinates, radius, center=False)
         self.assertTrue(expected_df.astype("float").equals(filtered_df.astype("float")))
 
-    def test_filter_coordinate_bounds_centered(self) -> None:
+    def test_filter_coordinate_bounds_centered(self):
         radius = 2
         coordinates = [(0, 2, 0), (0, 4, 1), (1, 6, 2), (1, 2, 3), (2, 4, 4), (2, 6, 5)]
 

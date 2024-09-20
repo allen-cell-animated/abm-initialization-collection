@@ -8,7 +8,7 @@ from abm_initialization_collection.sample.scale_sample_coordinates import scale_
 
 
 class TestScaleSampleCoordinates(unittest.TestCase):
-    def test_scale_sample_coordinates_by_absolute(self) -> None:
+    def test_scale_sample_coordinates_by_absolute(self):
         scale_xy = random.random()
         scale_z = random.random()
 
@@ -38,7 +38,7 @@ class TestScaleSampleCoordinates(unittest.TestCase):
         for expected, actual in zip(z_scaled, scaled_samples["z"]):
             self.assertAlmostEqual(expected, actual, places=5)
 
-    def test_scale_sample_coordinates_by_step(self) -> None:
+    def test_scale_sample_coordinates_by_step(self):
         scale_xy = 5
         scale_z = 10
         resolution = 20
@@ -69,7 +69,7 @@ class TestScaleSampleCoordinates(unittest.TestCase):
         for expected, actual in zip(z_scaled, scaled_samples["z"]):
             self.assertEqual(int(expected), actual)
 
-    def test_scale_sample_coordinates_invalid_coordinate_return_unchanged(self) -> None:
+    def test_scale_sample_coordinates_invalid_coordinate_return_unchanged(self):
         sample_data = np.array(
             [
                 [1, 2, 3, 4],

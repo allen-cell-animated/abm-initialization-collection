@@ -50,7 +50,7 @@ def create_voronoi_image(image: BioImage, channel: int, iterations: int, height:
 
 def create_boundary_mask(array: np.ndarray, iterations: int) -> np.ndarray:
     """
-    Creates filled boundary mask around regions in array.
+    Create filled boundary mask around regions in array.
 
     Parameters
     ----------
@@ -80,7 +80,7 @@ def create_boundary_mask(array: np.ndarray, iterations: int) -> np.ndarray:
 
 def get_mask_bounds(array: np.ndarray, target_range: int) -> tuple[int, int]:
     """
-    Calculates the indices of z axis bounds with given target range.
+    Calculate the indices of z axis bounds with given target range.
 
     If the current range between z axis bounds (the minimum and maximum
     indices in the z axis where there exist non-zero entries) is wider than
@@ -139,13 +139,12 @@ def get_array_slices(array: np.ndarray) -> tuple[slice, slice, slice]:
     yslice = slice(max(ymin - 1, 0), min(ymax + 2, ysize))
     xslice = slice(max(xmin - 1, 0), min(xmax + 2, xsize))
 
-    slices = (zslice, yslice, xslice)
-    return slices
+    return (zslice, yslice, xslice)
 
 
 def calculate_voronoi_array(array: np.ndarray) -> np.ndarray:
     """
-    Calculates voronoi on image array using distance transform.
+    Calculate voronoi on image array using distance transform.
 
     Parameters
     ----------
@@ -164,6 +163,4 @@ def calculate_voronoi_array(array: np.ndarray) -> np.ndarray:
     coordinates_z = distances[0].flatten()
     coordinates_y = distances[1].flatten()
     coordinates_x = distances[2].flatten()
-    voronoi = array[coordinates_z, coordinates_y, coordinates_x].reshape(array.shape)
-
-    return voronoi
+    return array[coordinates_z, coordinates_y, coordinates_x].reshape(array.shape)

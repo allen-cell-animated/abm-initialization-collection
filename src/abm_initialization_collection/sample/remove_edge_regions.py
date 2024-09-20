@@ -5,15 +5,15 @@ def remove_edge_regions(
     samples: pd.DataFrame, edge_threshold: int, edge_padding: float
 ) -> pd.DataFrame:
     """
-    Removes regions at edges.
+    Remove regions at edges.
 
     Parameters
     ----------
     samples
         Sample cell ids and coordinates.
-    threshold
+    edge_threshold
         Number of edge positions per axis needed to assign edge region.
-    padding
+    edge_padding
         Distance from axis limits to assign edge positions.
 
     Returns
@@ -35,7 +35,7 @@ def remove_edge_regions(
 
 def find_edge_ids(axis: str, samples: pd.DataFrame, threshold: float, padding: float) -> list[int]:
     """
-    Finds ids of cells with voxels touching edges of given axis.
+    Find ids of cells with voxels touching edges of given axis.
 
     Parameters
     ----------

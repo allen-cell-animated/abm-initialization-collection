@@ -9,7 +9,7 @@ from abm_initialization_collection.sample.get_image_samples import get_image_sam
 
 
 class TestGetImageSamples(unittest.TestCase):
-    def test_get_image_samples(self) -> None:
+    def test_get_image_samples(self):
         channel = 1
         array = np.array(
             [
