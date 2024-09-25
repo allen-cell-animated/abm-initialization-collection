@@ -1,3 +1,18 @@
+# [v0.7.0](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.7.0) - 2024-09-25
+
+> Compare with [v0.6.1](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.6.1...v0.7.0)
+
+### Tests
+
+- Add unit tests for initialization collection tasks by [@jessicasyu](https://github.com/jessicasyu) in [#42](https://github.com/allen-cell-animated/abm-initialization-collection/pull/42)
+
+### Admin
+
+- Update workflow action versions and badges by [@jessicasyu](https://github.com/jessicasyu) in [#41](https://github.com/allen-cell-animated/abm-initialization-collection/pull/41)
+- Bump dependency versions by [@jessicasyu](https://github.com/jessicasyu) in [#43](https://github.com/allen-cell-animated/abm-initialization-collection/pull/43)
+- Bump dependency versions by [@jessicasyu](https://github.com/jessicasyu) in [#44](https://github.com/allen-cell-animated/abm-initialization-collection/pull/44)
+- Add Python 3.11 to workflows and apply ruff linting by [@jessicasyu](https://github.com/jessicasyu) in [#45](https://github.com/allen-cell-animated/abm-initialization-collection/pull/45)
+
 # [v0.6.1](https://github.com/allen-cell-animated/abm-initialization-collection/releases/tag/v0.6.1) - 2024-05-07
 
 > Compare with [v0.6.0](https://github.com/allen-cell-animated/abm-initialization-collection/compare/v0.6.0...v0.6.1)
