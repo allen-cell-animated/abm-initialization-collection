@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> We are no longer actively maintaining this repository. All active work by the Allen Institute for Cell Science is located under the **[AllenCell](https://github.com/AllenCell)** organization.
+
 [![Build status](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/build.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/actions?query=workflow%3Abuild)
 [![Lint status](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/lint.svg)](https://github.com/allen-cell-animated/abm-initialization-collection/actions?query=workflow%3Alint)
 [![Documentation](https://allen-cell-animated.github.io/abm-initialization-collection/_badges/documentation.svg)](https://allen-cell-animated.github.io/abm-initialization-collection/)
